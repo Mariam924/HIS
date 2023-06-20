@@ -1,0 +1,33 @@
+.form .chosen-container {
+	font-size: rem(16);
+}
+.form .chosen-container .chosen-single, .form .chosen-container .chosen-drop {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+.form .chosen-container-active.chosen-with-drop .chosen-single, .form .chosen-container-active .chosen-choices {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.shadow {
+
+    box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0.15) !important;
+}
+.mult-select-tag .item-label {
+    color: #ffffff !important;
+}
+
+.mult-select-tag .item-container {
+    border: 1px solid #e6ebff !important;
+    background: #5555FF !important;
+}
+
+.mult-select-tag .item-close-svg {
+    color: white !important;
+}
+.block-title-doctor-notes {
+    font-size: 20px !important;
+}

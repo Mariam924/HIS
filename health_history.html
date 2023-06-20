@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health History</title>
+
+
+    <!-- Fav  Icon Link -->
+    <!-- <link rel="shortcut icon" type="image/png" href="../images/fav.png"> -->
+    <link rel="shortcut icon" type="image/png" href="images/d.png">
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- themify icons CSS -->
+    <!-- <link rel="stylesheet" href="css/themify-icons.css"> -->
+    <!-- Animations CSS -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/red.css" id="style_theme">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- morris charts -->
+    <link rel="stylesheet" href="../charts/css/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="../css/jquery-jvectormap.css">
+
+    <link rel="stylesheet" href="../css/my_style.css">
+
+    <script src="../js/modernizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Bruno+Ace&family=Chivo:wght@300;400;500;600;700;800;900&family=Lobster&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/history_patient.css">
+
+    <!-- DayPilot library -->
+<!--     <script src="../js/daypilot/daypilot-all.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <nav id="sidebar" class="proclinic-bg">
+			<div class="sidebar-header">
+					<div class="ml-3">
+						<img src="images/d.png" class="logo w-20 mb-4 d-inline" alt="logo"><h2 class="d-inline pt-5 mt-6 font-w600 header_font ml-0">entque.</h2>
+					</div>			
+			</div>
+			<ul class="list-unstyled components">
+				<li class="">					
+						<a href="index.html" class="ml-3">Dashboard</a>					
+					<li class="ml-3">				 
+						 <a href="calender.html" aria-expanded="false">
+						   <span class="ml-3 mb-3">Schedule</span>
+						 </a>					 
+					 </li>
+				</li>
+
+                <li class="mt-4">
+					<a href="#nav-appoint" data-toggle="collapse" aria-expanded="false">
+						<span class="ml-3">Appointments</span>
+					</a>
+					<ul class="collapse list-unstyled new-round rounded" id="nav-appoint">
+						<li>
+							<a href="Appointments/add_appointment.html">Add Appointment</a>
+						</li>
+						<li>
+							<a href="Appointments/edit_appointment.html">Edit Appointment</a>
+						</li>
+						<li>
+							<a href="Appointments/all_appointment.html">All Appointments</a>
+						</li>
+						
+					</ul>
+				</li>
+	
+				
+				<li class="mt-4 active">
+					<a href="#nav-patients" data-toggle="collapse" aria-expanded="false">
+						<span class="">Patients</span>
+					</a>
+					<ul class="collapse list-unstyled new-round rounded" id="nav-patients">
+						<li>
+							<a href="add_patient.html">Add Patient</a>
+						</li>
+						<li>
+							<a href="all_patients.html">All Patients</a>
+						</li>
+						<li>
+							<a href="edit_patient.html">Edit Patient</a>
+						</li>
+					</ul>
+				</li>
+	
+	
+				<li>
+					<a href="#nav-doctors" data-toggle="collapse" aria-expanded="false">
+						<span class="ml-3 ">Doctors</span>
+					</a>
+					<ul class="collapse list-unstyled new-round" id="nav-doctors">
+						<li>
+							<a href="Doctors/add_doctor.html">Add Doctor</a>
+						</li>
+						<li>
+							<a href="Doctors/all_doctors.html">All Doctors</a>
+						</li>
+						<li>
+							<a href="Doctors/edit_doctor.html">Edit Doctor</a>
+						</li>
+					</ul>
+				</li>
+	
+	
+				<li>
+					<a href="#nav-Staff" data-toggle="collapse" aria-expanded="false"> 
+						<span class="ml-3 ">Staff</span>
+					</a>
+					<ul class="collapse list-unstyled new-round" id="nav-Staff">
+						<li>
+							<a href="Staff/add_staff.html">Add Staff</a>
+						</li>
+						<li>
+							<a href="Staff/all_Staff.html">All Staff</a>
+						</li>
+						<li>
+							<a href="Staff/edit_staff.html">Edit Staff</a>
+						</li>
+					</ul>
+				</li>
+	
+	
+				
+				<li class="">
+					<a href="#nav-appointment" data-toggle="collapse" aria-expanded="false">
+						<span class="ml-3">Billing</span>
+					</a>
+					<ul class="collapse list-unstyled new-round" id="nav-appointment">
+						<li>
+							<a href="Billing/add_billing.html">Add Billing</a>
+						</li>
+						<li>
+							<a href="Billing/bill_list.html">Billing List</a>
+						</li>
+	
+						<li>
+							<a href="Billing/Invoice.html">Invoice</a>
+						</li>
+					</ul>
+				</li>
+	
+	
+				<li>
+					<a href="#nav-units" data-toggle="collapse" aria-expanded="false">
+						<span class="ml-3 ">Inventory</span>
+					</a>
+					<ul class="collapse list-unstyled new-round" id="nav-units">
+						<li>
+							<a href="Units/add_unit.html">Add Unit</a>
+						</li>
+						<li>
+							<a href="Units/edit_unit.html">Edit Unit</a>
+						</li>
+						<li>
+							<a href="Units/stock_units.html">Item Stock List</a>
+						</li>
+						<li>
+							<a href="Units/Issued_units.html">Issued Items</a>
+						</li>
+					</ul>
+				</li>
+	
+				<li>
+					<a href="#nav-services" data-toggle="collapse" aria-expanded="false">
+						<span class="ml-3 ">Services</span>
+					</a>
+					<ul class="collapse list-unstyled new-round" id="nav-services">
+						<li>
+							<a href="Services/add_service.html">Add Service</a>
+						</li>
+						<li>
+							<a href="Services/edit_service.html">Edit Service</a>
+						</li>
+						<li>
+							<a href="Services/cato.html">Services Categories</a>
+						</li>
+						<li>
+							<a href="Services/all_services.html">All Services</a>
+						</li>
+						
+					</ul>
+				</li>
+	
+	
+				<li>
+					<a href="chat.html">
+						<span class="ml-3 ">Chat</span>
+					</a>
+				</li>
+	
+			</ul>
+			<div class="nav-help animated fadeIn m-3 rounded-gray position-relative p-3">
+				<img src="images/help_trans.png"  class= 'w-100 position-absolute help-img' alt="">
+				<p class="copyright-text text-dark text-center">Have any question or need further assistance?</p>
+				<button class="button1">Ask Now!</button>
+			</div>
+		</nav>
+
+        <div id="content">
+
+<!--             <div class="row no-margin-padding">
+                <div class="col-md-6">
+                    <h2 class="block-title my-3">Health History Form</h2>
+                </div>
+                <div class="col-md-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </div>
+            </div> -->
+
+            <!-- Main Content -->
+           <div class="w-85 mt-4">
+            <div class="container-fluid">
+                <div class="page-content container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-xs-12 card_history">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- <h4 class="card-title">Dental information</h4> -->
+                                    <h2 class="block-title my-3">Health History Form</h2>
+                                    <form >
+                                        <input type="hidden"> <input type="hidden"> 
+                                        <input type="hidden" name="patient_id" value="304">
+
+                                        <div class="form-group">
+                                            <label for="diagnosis">Diagnosis</label>
+                                            <select name="select-1" id="select-1" multiple>
+                                                <option value="1">K00.0 Edentulism</option>
+                                                <option value="2">K00.1 Supernumerary teeth</option>
+                                                <option value="3">K00 Development and tooth eruption
+                                                    disorders</option>
+                                                <option value="4">K00.2 Teeth size and shape abnormalities</option>
+                                                <option value="5">K00.4 Impaired tooth formation</option>
+                                                <option value="6">K00.5 Hereditary disorders of tooth
+                                                    structure, not included in other sections</option>
+                                                <option value="7">K00.6 Tooth eruption disturbance</option>
+                                                <option value="8">K00.7 Tooth eruption syndrome</option>
+                                                <option value="9">K00.8 Other disorders of dental development</option>
+                                                <option value="10">K00.9 Unspecified dental development
+                                                    disorder</option>
+                                                <option value="11">K01 Retained and impacted teeth</option>
+                                                <option value="12">K01.0 Retained teeth</option>
+                                                <option value="13">K01.1 Impacted teeth</option>
+                                                <option value="14">K02 Dental cavities</option>
+                                                <option value="15">K02.0 Tooth enamel breakdown</option>
+                                                <option value="16">K02.1 Dentin caries</option>
+                                                <option value="17">K02.2 Cement caries</option>
+                                                <option value="18">K02.3 Arrested dental caries</option>
+                                                <option value="19">K02.4 Odontoclasia</option>
+                                                <option value="20">K02.8 Other dental caries</option>
+                                                <option value="21">K02.9 Unspecified dental caries</option>
+                                                <option value="22">K03 Other dental hard tissue diseases</option>
+                                                <option value="23">K03.0 Increased tooth abrasion</option>
+                                                <option value="24">K03.1 Teeth slicing</option>
+                                                <option value="25">K03.2 Teeth erosion</option>
+                                                <option value="26">K03.3 Pathological tooth dessication</option>
+                                                <option value="27">K03.4 Hypercementosis</option>
+                                                <option value="28">K03.5 Ankylosed tooth</option>
+                                                <option value="29">K03.6 Dental deposits [excrescences]</option>
+                                                <option value="30">K03.7 Discoloration of dental hard tissues
+                                                    after tooth eruption</option>
+                                                <option value="31">K03.8 Other specified dental hard tissue
+                                                    diseases</option>
+                                                <option value="32">K03.9 Unspecified dental hard tissue
+                                                    disease</option>
+                                                <option value="33">K04 Pulp and periapical tissue diseases</option>
+                                                <option value="34">K04.0 Pulpitis</option>
+                                                <option value="35">K04.1 Pulp necrosis</option>
+                                                <option value="36">K04.2 Tooth pulp degeneration</option>
+                                                <option value="37">K04.3 Abnormal hard tissue formation in the
+                                                    pulp</option>
+                                                <option value="38">K04.4 Acute apical periodontitis of pulpal
+                                                    origin</option>
+                                                <option value="39">K04.5 Chronic apical periodontitis</option>
+                                                <option value="40">K04.6 Periapical abscess with cavity</option>
+                                                <option value="41">K04.7 Periapical abscess without a cavity</option>
+                                                <option value="42">K04.8 Radicular cyst</option>
+                                                <option value="43">K04.9 Other and unspecified pulp and
+                                                    periapical tissue diseases</option>
+                                                <option value="44">K05 Gingivitis and periodontal disease</option>
+                                                <option value="45">K05.0 Acute gingivitis</option>
+                                                <option value="46">K05.1 Chronic gingivitis</option>
+                                                <option value="47">K05.2 Acute periodontitis</option>
+                                                <option value="48">K05.3 Chronic periodontitis</option>
+                                                <option value="49">K05.4 Periodontosis</option>
+                                                <option value="50">K05.5 Other periodontal diseases</option>
+                                                <option value="51">K05.6 Unspecified periodontal diseases
+                                                </option>
+                                                <option value="52">K06 Other changes in the gums and
+                                                    edentulous alveolar ridge</option>
+                                                <option value="53">K06.0 Gum recession</option>
+                                                <option value="54">K06.1 Gum hypertrophy</option>
+                                                <option value="55">K06.2 Gingival and edentulous alveolar
+                                                    ridge lesions caused by trauma</option>
+                                                <option value="56">K06.8 Other specified changes in the
+                                                    gingiva and edentulous alveolar ridge</option>
+                                                <option value="57">K06.9 Unspecified gingival and edentulous
+                                                    alveolar margin ridge</option>
+                                                <option value="58">K07 Dento-facial anomaly [including anomaly
+                                                    of occlusion]</option>
+                                                <option value="59">K07.0 Main anomalies of jaw size</option>
+                                                <option value="60">K07.1 Anomalies of dento-facial relations
+                                                </option>
+                                                <option value="61">K07.2 Anomalies of dental arch ratios
+                                                </option>
+                                                <option value="62">K07.3 Anomalies in the teeth position
+                                                </option>
+                                                <option value="63">K07.4 Unspecified occlusion anomaly
+                                                </option>
+                                                <option value="64">K07.5 Functional dento-facial anomalies
+                                                </option>
+                                                <option value="65">K07.6 Diseases of the temporomandibular
+                                                    joint</option>
+                                                <option value="66">K07.8 Other dento-facial anomalies</option>
+                                                <option value="67">K07.9 Unspecified dento-facial anomalies
+                                                </option>
+                                                <option value="68">K08 Other changes in the teeth and their
+                                                    supporting apparatus</option>
+                                                <option value="69">K08.0 Dental exfoliation due to systemic
+                                                    disorders</option>
+                                                <option value="70">K08.1 Tooth loss due to accident,
+                                                    extraction, or local periodontal disease</option>
+                                                <option value="71">K08.2 Atrophy of the edentulous alveolar
+                                                    ridge</option>
+                                                <option value="72">K08.3 Dental root retention</option>
+                                                <option value="72">K08.8 Other specified changes in the teeth
+                                                    and their supporting apparatus</option>
+                                                <option value="73">K08.9 Second dentition; unspecified teeth
+                                                    and their supporting apparatus replacement</option>
+                                                <option value="74">K09 Oral cysts not classified in other
+                                                    sections</option>
+                                                <option value="75">K09.0 Cysts formed during teeth formation
+                                                </option>
+                                                <option value="76">K09.1 Nondontogenic oral cysts</option>
+                                                <option value="77">K09.2 Other jaw cysts</option>
+                                                <option value="78">K09.8 Other specified oral cysts, not
+                                                    classified in other sections</option>
+                                                <option value="79">K09.9 Unspecified oral cyst</option>
+                                                <option value="80">K10 Other jaw diseases</option>
+                                                <option value="81">K10.0 Jaw development disorders</option>
+                                                <option value="82">K10.1 Central giant cell epulis</option>
+                                                <option value="83">K10.2 Jaw inflammatory diseases</option>
+                                                <option value="84">K10.3 Jaw alveolitis</option>
+                                                <option value="85">K10.8 Other specified jaw diseases
+                                                </option>
+                                                <option value="86">K10.9 Unspecified jaw disease</option>
+                                                <option value="87">K11 Salivary gland disease</option>
+                                                <option value="88">K11.0 Salivary gland atrophy</option>
+                                                <option value="89">K11.1 Salivary gland hypertrophy</option>
+                                                <option value="90">K11.2 Salivary adenitis</option>
+                                                <option value="91">K11.3 Salivary gland abscess</option>
+                                                <option value="92">K11.4 Salivary gland fistula</option>
+                                                <option value="93">K11.5 Sialolithiasis</option>
+                                                <option value="94">K11.6 Salivary gland mucocele</option>
+                                                <option value="95">K11.7 Salivary gland secretion disorder
+                                                </option>
+                                                <option value="96">K11.8 Other salivary gland diseases
+                                                </option>
+                                                <option value="97">K11.9 Unspecified salivary gland disease
+                                                </option>
+                                                <option value="98">K12 Stomatitis and related lesions
+                                                </option>
+                                                <option value="99">K12.0 Recurrent aphthae</option>
+                                                <option value="100">K12.1 Other forms of stomatitis</option>
+                                                <option value="101">K12.2 Ludwig's disease</option>
+                                            </select>                                                                                                                          
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="complaints">Complaints</label>
+                                            <select name="select-2" id="select-2" multiple>
+                                                <option>01. No complaints</option>
+                                                <option>01. No complaints</option>
+                                                <option>02. Complaint about unsatisfactory smile aesthetics</option>
+                                                <option>01. Complaint about tooth mobility</option>
+                                                <option>01. No complaints</option>
+                                                <option>01. No complaints; gross debridement</option>
+                                                <option>02. Complaint about unsatisfactory smile aesthetics</option>
+                                                <option>02. Complaints of secondary tooth eruption without loss of a primary tooth</option>
+                                                <option>02. No complaints; preventive examination</option>
+                                                <option>03. Complaint of unsatisfactory tooth arch aesthetics</option>
+                                                <option>03. No complaints</option>
+                                                <option>04. Complaints about uneven teeth position</option>
+                                                <option>04. Complaints of a carious cavity</option>
+                                                <option>05. Complaints of pain in the temporomandibular joints</option>
+                                                <option>05. Complaints of short-term pain from thermal stimuli (cold/hot food)</option>
+                                                <option>06. Complaints about inconvenience when chewing, biting off food</option>
+                                                <option>06. Complaints of short-term pain from thermal stimuli (sugary food)</option>
+                                                <option>07. Complaints of clicking in the TMJ area</option>
+                                                <option>07. Complaints of long-term pain from thermal stimuli (cold/hot food)</option>
+                                                <option>08. Complaints of facial asymmetry</option>
+                                                <option>08. Complaints of tooth pain during solid food intake</option>
+                                                <option>09. Complaints about filling loss</option>
+                                                <option>09. Complaints of the inability to pronounce certain sounds correctly</option>
+                                                <option>1. Dental disorders</option>
+                                                <option>1.1. Aesthetics</option>
+                                                <option>1.1.1. Tooth cavity</option>
+                                                <option>1.1.2. Tooth filling defect</option>
+                                                <option>1.1.3. Food retention</option>
+                                                <option>1.1.4. Tooth discoloration</option>
+                                                <option>1.1.5. Dental deposits</option>
+                                                <option>1.1.6. Missing tooth(teeth)</option>
+                                                <option>1.2. Pain</option>
+                                                <option>1.2.2. No complaints</option>
+                                                <option>1.2.3. Pain when biting</option>
+                                                <option>1.2.4. Complaints about filling loss</option>
+                                                <option>1.2.5. Feeling of a growing tooth</option>
+                                                <option>1.2.6. Gnawing pain</option>
+                                                <option>1.2.7. Puffiness complaints</option>
+                                                <option>1.3. Non-carious lesions</option>
+                                                <option>1.3.1. Sensitive teeth</option>
+                                                <option>1.3.2. Cosmetic defect</option>
+                                                <option>1.3.3. Tooth abrasion</option>
+                                                <option>10. Complaints about missing teeth (inborn)</option>
+                                                <option>10. Complaints of a chipped tooth</option>
+                                                <option>11. Complaints about chipped fillings</option>
+                                                <option>11. Complaints about missing teeth (acquired)</option>
+                                                <option>12. Complaints about chipped teeth during meals</option>
+                                                <option>12. Complaints of discomfort while wearing the device</option>
+                                                <option>13. Complaints about food getting stuck in teeth</option>
+                                                <option>13. Complaints about the arc getting out of the brace clip</option>
+                                                <option>14. Complaints about tooth discoloration</option>
+                                                <option>14. Complaints of braces ungluing</option>
+                                                <option>15. Complaints about the peeling of the lock</option>
+                                                <option>15. Complaints of spontaneous, aching pains</option>
+                                                <option>16. Complaints about plaque accumulation</option>
+                                                <option>16. Complaints about the brace clip ungluing</option>
+                                                <option>17. Complaints of bleeding gums in the tooth area</option>
+                                                <option>17. The retainer came off</option>
+                                                <option>18. Complaints of gum swelling</option>
+                                                <option>18. Complaints of gums' redness</option>
+                                                <option>18. The brace clip scratches</option>
+                                                <option>19. Complaints about teeth gaps</option>
+                                                <option">19. Prolonged complaints; No complaints, orthodontic treatment in process</option>
+                                                <option>2. Gum diseases</option>
+                                                <option>2.1. Gum pain when eating</option>
+                                                <option>2.2. Bleeding gums</option>
+                                                <option>2.3. Bad breath</option>
+                                                <option>2.4. Changes in gum appearance</option>
+                                                <option>2.5. Exposed tooth necks</option>
+                                                <option>2.6. Parodontal abscess</option>
+                                                <option>2.7. Tooth mobility</option>
+                                                <option>2.8. Pus discharge via periodontal pocket</option>
+                                                <option>20. Complaints of fistulous tract</option>
+                                                <option>21. Complaints about dental plaque that cannot be brushed off</option>
+                                                <option>22. Complaints of night pains</option>
+                                                <option>23. Feeling of swelling in the area</option>
+                                                <option>24. Complaints about body temperature rise</option>
+                                                <option>24. Complaints about pains in the area</option>
+                                                <option>25. Complaints about bad breath</option>
+                                                <option>26. Complaints about tooth decay</option>
+                                                <option>27. Complaints of aesthetic defect</option>
+                                                <option>28. Complaints about difficulty opening the mouth</option>
+                                                <option>29. Complaints of pain when swallowing</option>
+                                                <option>3. No complaints, came for professional oral cleaning</option>
+                                                <option>3.1. Absence</option>
+                                                <option>3.1.1. Complaints about dental discoloration</option>
+                                                <option">3.1.2. No complaints, came for professional oral cleaning</option212>
+                                                <option >3.1.3. No complaints, professional oral cavity cleaning before orthodontic treatment
+                                                </option>
+                                                <option>3.1.4. No complaints, professional oral cavity cleaning during orthodontic treatment
+                                                </option>
+                                                <option>3.1.5. No complaints, professional oral cavity cleaning after orthodontic treatment
+                                                </option>
+                                                <option>3.1.6. Complaints about bleeding gums when brushing teeth</option>
+                                                <option>3.1.7. Complaints about plaque accumulation</option>
+                                                <option>3.1.8. Complaints about bad breath</option>
+                                                <option>3.2. Scheduled examination</option>
+                                                <option>3.3. Extended treatment</option>
+                                                <option>3.4. Tooth pulp removal due to medical reasons</option>
+                                                <option>3.5. Revision of tooth canals</option>
+                                                <option>3.6. Prosthetic correction</option>
+                                                <option>3.7. Request for tooth extraction</option>
+                                                <option>30. Complaints about tooth mobility</option>
+                                                <option>31. Complaints of pain when brushing teeth</option>
+                                                <option>32. Complaints of pain when biting</option>
+                                                <option>33. Complaints of pain in the area of the removed tooth</option>
+                                                <option>34. Complaints about swelling in the buccal region</option>
+                                                <option>35. Complaints of chipped tooth coronal section</option>
+                                                <option>4. Injuries</option>
+                                                <option>4.1. Crack</option>
+                                                <option>4.2. Chipped tooth</option>
+                                                <option>4.3. Pain when biting</option>
+                                                <option>Acute pain</option>
+                                                <option >Common</option>
+                                                <option>Complaints about external aesthetic defects</option>
+                                                <option>Complaints about smudging</option>
+                                                <option>Complaints about teeth sensitivity when eating sweets</option>
+                                                <<i class="fa fa-optin-monster" aria-hidden="true"></i>>Complaints of pain</option>
+                                                <option>Complaints of plaque accumulation</option>
+                                                <option>Complaints of poor fixation</option>
+                                                <option>Filling loss</option>
+                                                <option>No complaints, extended treatmen</option>
+                                                <option>No complaints, general examination</option>
+                                                <option>No complaints; the need of professional oral cleaning</option>
+                                                <option>No complaints; the need of professional oral cleaning after orthodontic treatment
+                                                </option>
+                                                <option>No complaints; the need of professional oral cleaning before orthodontic treatment
+                                                </option>
+                                                <option>No complaints; the need of professional oral cleaning during orthodontic treatment
+                                                </option>
+                                                <option>Orthodontic treatment</option>
+                                                <option>Prevention and hygiene</option>
+                                                <option>Referred for advice</option>
+                                                <option>Surgery (children)</option>
+                                                <option>Total/partial teeth loss</option>
+                                            </select>                                        
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="transferred_diseases">Transferred and concomitant
+                                                diseases</label>
+                                            <textarea class="form-control" id="transferred_diseases"
+                                                name="transferred_diseases"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="development_disease">Development of a real disease</label>
+                                            <textarea class="form-control" id="development_disease"
+                                                name="development_disease"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="data_teeth">Objective research data, external inspection, dental
+                                                condition</label>
+                                            <textarea class="form-control" id="data_teeth" name="data_teeth"></textarea>
+                                        </div>
+
+                                        <div class="form-group" style="overflow-x: auto;">
+                                            <table class="table table-bordered table-tooth" style="min-width: 1500px;">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Date</th>
+                                                        <th scope="col" colspan="17">Diagnosis</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="4">
+                                                            <input type="date"
+                                                                class="form-control" value="2023-04-28">
+                                                        </td>
+                                                        <td>
+                                                            <select class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_left_7[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_left_6[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_left_5[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_left_4[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_left_3[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_left_2[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_left_1[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_right_1[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_right_2[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_right_3[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_right_4[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_right_5[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_right_6[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_right_7[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_top_right_8[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="align-middle">18 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/18.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">17 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/17.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">16 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/16.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">15 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/15.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">14 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/14.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">13 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/13.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">12 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/12.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">11 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/11.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">21 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/21.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">22 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/22.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">23 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/23.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">24 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/24.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">25 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/25.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">26 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/26.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">27 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/27.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">28 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/28.svg"
+                                                                width="25"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="align-middle">48 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/48.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">47 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/47.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">46 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/46.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">45 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/45.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">44 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/44.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">43 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/43.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">42 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/42.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">41 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/41.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">31 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/31.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">32 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/32.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">33 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/33.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">34 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/34.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">35 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/35.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">36 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/36.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">37 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/37.svg"
+                                                                width="25"></td>
+                                                        <td class="align-middle">38 <img
+                                                                src="https://us.zubok-crm.com/images/icons/tooth/38.svg"
+                                                                width="25"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <select name="tooth_down_left_8[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_left_7[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_left_6[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_left_5[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_left_4[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_left_3[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_left_2[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_left_1[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_right_1[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_right_2[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_right_3[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_right_4[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_right_5[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_right_6[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_right_7[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="tooth_down_right_8[0]" class="form-control">
+                                                                {
+                                                                <option value="1" selected=""> w - empty</option>;
+                                                                {
+                                                                <option value="2">С - caries</option>;
+                                                                {
+                                                                <option value="3">Р - pulpitis</option>;
+                                                                {
+                                                                <option value="4">Pt - periodontitis</option>;
+                                                                {
+                                                                <option value="5">Lp - localized parodontitis</option>;
+                                                                {
+                                                                <option value="6">Gp - generalized parodontitis</option>
+                                                                ;
+                                                                {
+                                                                <option value="7">R - root</option>;
+                                                                {
+                                                                <option value="8">А - absent</option>;
+                                                                {
+                                                                <option value="9">Cd - crown dental</option>;
+                                                                {
+                                                                <option value="10">Df - dental filling</option>;
+                                                                {
+                                                                <option value="11">F - facet</option>;
+                                                                {
+                                                                <option value="12">ar - artificial tooth</option>;
+                                                                {
+                                                                <option value="13">r - restoration</option>;
+                                                                {
+                                                                <option value="14">H - homisection</option>;
+                                                                {
+                                                                <option value="15">Am - amputation</option>;
+                                                                {
+                                                                <option value="16">res - resection</option>;
+                                                                {
+                                                                <option value="17">pin - pin</option>;
+                                                                {
+                                                                <option value="18">i - implantation</option>;
+                                                                {
+                                                                <option value="19">Rp - replantation</option>;
+                                                                {
+                                                                <option value="20">Dc - dental calculus</option>;
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th scope="row" colspan="17"><a href="#" title=""
+                                                                class="add-line_tooth">Add</a></th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="bite">Bite</label>
+                                            <textarea class="form-control" id="bite" name="bite"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="hygiene">The state of oral hygiene, the state of the oral
+                                                mucosa, gums, alveolar processes and palate.</label>
+                                            <textarea class="form-control" id="hygiene" name="hygiene"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="data_x_ray">X-ray examination data, laboratory tests</label>
+                                            <textarea class="form-control" id="data_x_ray" name="data_x_ray"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="color">Vita color</label>
+                                            <textarea class="form-control" id="color" name="color"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="date_hygiene_training">Date of training in oral hygiene
+                                                skills</label>
+                                            <textarea class="form-control" id="date_hygiene_training"
+                                                name="date_hygiene_training"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="date_hygiene_training_inspection">Oral hygiene inspection
+                                                date</label>
+                                            <textarea class="form-control" id="date_hygiene_training_inspection"
+                                                name="date_hygiene_training_inspection"></textarea>
+                                        </div>
+
+                                        <!-- <h4 class="card-title text-center">DOCTOR NOTES</h4> -->
+                                        <h5 class="block-title block-title-doctor-notes my-3 text-center">Doctor Notes</h5>
+                                        <div class="form-group">
+                                            <table class="table table-bordered table-service">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Date</th>
+                                                        <th scope="col">Anamnesis, status, diagnosis, treatment and
+                                                            recommendations</th>
+                                                        <th scope="col">Doctor</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            04-28-2023
+                                                        </td>
+                                                        <td>
+                                                            - Topical Anesthesia,
+                                                        </td>
+                                                        <td>
+                                                            Maryam Mahmoud
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th scope="row" colspan="3"><a href="#" title=""
+                                                                class="add-line-service">Add</a></th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                        <div class="float-right">
+
+                                            <a href="../edit_patient.html" target="_blank">
+                                                <button type="button" class="btn btn_blue">Save</button></a>
+
+                                            <a href="../edit_patient.html" target="_blank">
+                                                <button type="button" class="btn btn_gray">Cancel</button></a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+           </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Jquery Library-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <!-- Popper Library-->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap Library-->
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <!-- Datatable  -->
+    <script src="../datatable/jquery.dataTables.min.js"></script>
+    <script src="../datatable/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Script-->
+    <script src="../js/custom.js"></script>
+    <script src="../js/edit_patient.js"></script>
+    <script src="../js/history.js"></script>
+    <script>
+        /* new MultiSelectTag('select-1')  */ // id
+        new MultiSelectTag('select-1', {
+        rounded: true,    // default true
+        shadow: true      // default false
+    })
+        /* new MultiSelectTag('select-2')  */ // id
+        new MultiSelectTag('select-2', {
+        rounded: true,    // default true
+        shadow: true      // default false
+    })
+    </script>
+
+</body>
+
+</html>

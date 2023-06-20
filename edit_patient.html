@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit patient</title>
+
+
+<!-- Fav  Icon Link -->
+<link rel="shortcut icon" type="image/png" href="images/d.png">
+<link rel="stylesheet" href="css/style.css">
+
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- themify icons CSS -->
+<!-- <link rel="stylesheet" href="css/themify-icons.css"> -->
+<!-- Animations CSS -->
+<link rel="stylesheet" href="css/animate.css">
+<!-- Main CSS -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/red.css" id="style_theme">
+<link rel="stylesheet" href="css/responsive.css">
+<!-- morris charts -->
+<link rel="stylesheet" href="charts/css/morris.css">
+<!-- jvectormap -->
+<link rel="stylesheet" href="css/jquery-jvectormap.css">
+
+<link rel="stylesheet" href="css/my_style.css">
+
+<script src="js/modernizr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Bruno+Ace&family=Chivo:wght@300;400;500;600;700;800;900&family=Lobster&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- DayPilot library -->
+  <script src="js/daypilot/daypilot-all.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div class="wrapper">
+
+	<nav id="sidebar" class="proclinic-bg">
+		<div class="sidebar-header">
+				<div class="ml-3">
+					<img src="images/d.png" class="logo w-20 mb-4 d-inline" alt="logo"><h2 class="d-inline pt-5 mt-6 font-w600 header_font ml-0">entque.</h2>
+				</div>			
+		</div>
+		<ul class="list-unstyled components">
+			<li class="">					
+					<a href="index.html" class="ml-3">Dashboard</a>					
+				<li class="ml-3">				 
+					 <a href="calender.html" aria-expanded="false">
+					   <span class="ml-3 mb-3">Schedule</span>
+					 </a>					 
+				 </li>
+			</li>
+
+			<li class="mt-4">
+				<a href="#nav-appoint" data-toggle="collapse" aria-expanded="false">
+					<span class="ml-3">Appointments</span>
+				</a>
+				<ul class="collapse list-unstyled new-round rounded" id="nav-appoint">
+					<li>
+						<a href="Appointments/add_appointment.html">Add Appointment</a>
+					</li>
+					<li>
+						<a href="Appointments/edit_appointment.html">Edit Appointment</a>
+					</li>
+					<li>
+						<a href="Appointments/all_appointment.html">All Appointments</a>
+					</li>
+					
+				</ul>
+			</li>
+
+			
+			<li class="mt-4 active">
+				<a href="#nav-patients" data-toggle="collapse" aria-expanded="false">
+					<span class="">Patients</span>
+				</a>
+				<ul class="collapse list-unstyled new-round rounded" id="nav-patients">
+					<li>
+						<a href="add_patient.html">Add Patient</a>
+					</li>
+					<li>
+						<a href="all_patients.html">All Patients</a>
+					</li>
+					<li>
+						<a href="edit_patient.html">Edit Patient</a>
+					</li>
+				</ul>
+			</li>
+
+
+			<li>
+				<a href="#nav-doctors" data-toggle="collapse" aria-expanded="false">
+					<span class="ml-3 ">Doctors</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-doctors">
+					<li>
+						<a href="Doctors/add_doctor.html">Add Doctor</a>
+					</li>
+					<li>
+						<a href="Doctors/all_doctors.html">All Doctors</a>
+					</li>
+					<li>
+						<a href="Doctors/edit_doctor.html">Edit Doctor</a>
+					</li>
+				</ul>
+			</li>
+
+
+			<li>
+				<a href="#nav-Staff" data-toggle="collapse" aria-expanded="false"> 
+					<span class="ml-3 ">Staff</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-Staff">
+					<li>
+						<a href="Staff/add_staff.html">Add Staff</a>
+					</li>
+					<li>
+						<a href="Staff/all_Staff.html">All Staff</a>
+					</li>
+					<li>
+						<a href="Staff/edit_staff.html">Edit Staff</a>
+					</li>
+				</ul>
+			</li>
+
+
+			
+			<li class="">
+				<a href="#nav-appointment" data-toggle="collapse" aria-expanded="false">
+					<span class="ml-3">Billing</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-appointment">
+					<li>
+						<a href="Billing/add_billing.html">Add Billing</a>
+					</li>
+					<li>
+						<a href="Billing/bill_list.html">Billing List</a>
+					</li>
+
+					<li>
+						<a href="Billing/Invoice.html">Invoice</a>
+					</li>
+				</ul>
+			</li>
+
+
+			<li>
+				<a href="#nav-units" data-toggle="collapse" aria-expanded="false">
+					<span class="ml-3 ">Inventory</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-units">
+					<li>
+						<a href="Units/add_unit.html">Add Unit</a>
+					</li>
+					<li>
+						<a href="Units/edit_unit.html">Edit Unit</a>
+					</li>
+					<li>
+						<a href="Units/stock_units.html">Item Stock List</a>
+					</li>
+					<li>
+						<a href="Units/Issued_units.html">Issued Items</a>
+					</li>
+				</ul>
+			</li>
+
+			<li>
+				<a href="#nav-services" data-toggle="collapse" aria-expanded="false">
+					<span class="ml-3 ">Services</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-services">
+					<li>
+						<a href="Services/add_service.html">Add Service</a>
+					</li>
+					<li>
+						<a href="Services/edit_service.html">Edit Service</a>
+					</li>
+					<li>
+						<a href="Services/cato.html">Services Categories</a>
+					</li>
+					<li>
+						<a href="Services/all_services.html">All Services</a>
+					</li>
+					
+				</ul>
+			</li>
+
+
+			<li>
+				<a href="chat.html">
+					<span class="ml-3 ">Chat</span>
+				</a>
+			</li>
+
+		</ul>
+		<div class="nav-help animated fadeIn m-3 rounded-gray position-relative p-3">
+			<img src="images/help_trans.png"  class= 'w-100 position-absolute help-img' alt="">
+			<p class="copyright-text text-dark text-center">Have any question or need further assistance?</p>
+			<button class="button1">Ask Now!</button>
+		</div>
+	</nav>
+
+	<div id="content">
+
+		<div class="row no-margin-padding">
+			<div class="col-md-6">
+				<h2 class="block-title my-3">Editing a patient</h2>
+			</div>
+			<div class="col-md-6">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active">Dashboard</li>
+				</ol>
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div class="container-fluid">
+
+
+		<!-- 	<div class="page-content container-fluid">
+				<div class="row">
+					<div class="col-12 col-lg-12">
+						<div class="tab-container">
+							<ul class="nav nav-tabs nav-tabs-classic" role="tablist">
+								<li class="nav-item"><a class="nav-link show active" href="#main" data-toggle="tab"
+										role="tab" aria-selected="true">Main</a></li>
+								<li class="nav-item"><a class="nav-link" href="#document" data-toggle="tab" role="tab"
+										aria-selected="false">Documents</a></li>
+								<li class="nav-item"><a class="nav-link" href="#visit" data-toggle="tab" role="tab"
+										aria-selected="false">Visits</a></li>
+								<li class="nav-item"><a class="nav-link" href="#file" data-toggle="tab" role="tab"
+										aria-selected="false">Files</a></li>
+								<li class="nav-item"><a class="nav-link" href="#treatment_plan" data-toggle="tab"
+										role="tab" aria-selected="false">Treatment plan</a></li>
+								<li class="nav-item"><a class="nav-link" href="#receipt" data-toggle="tab" role="tab"
+										aria-selected="false">Receipts</a></li>
+							</ul>
+							<div class="tab-content tabcontent-border mb-4 p-4">
+								<div class="tab-pane show active" id="main" role="tabpanel">
+									<form method="POST" action="https://us.zubok-crm.com/admin/patient/304"
+										class="mt-4">
+										<input type="hidden" name="_method" value="PATCH"> <input type="hidden"
+											name="_token" value="Sz82EQnRzCOLMWoiy3SgVjjW0Zma4dXoiP40L4vs">
+
+										<div class="form-group">
+											<label for="name">First name</label>
+											<input type="text" class="form-control" value="Maryam">
+										</div>
+										<div class="form-group">
+											<label for="patronymic">Middle name</label>
+											<input type="text" class="form-control" min="3" max="200" value="Mahmoud">
+										</div>
+										<div class="form-group">
+											<label for="surname">Last name</label>
+											<input type="text" class="form-control" id="surname" name="surname" min="3"
+												max="200" value="Muhammed">
+										</div>
+										<div class="form-group">
+											<label for="date_of_birth">Date of birth</label>
+											<input type="date" class="form-control" id="date_of_birth"
+												name="date_of_birth" min="3" max="200" value="2000-04-27">
+										</div>
+										<div class="form-group">
+											<label>Gender</label>
+											<select class="form-control">
+												<option>Male</option>
+												<option selected="">Female</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="place_of_residence">Address, city, street, house number,
+												zip</label>
+											<input type="text" class="form-control" id="place_of_residence"
+												name="place_of_residence" min="3" max="200" value="Cairo, Egypt">
+										</div>
+										<div class="form-group">
+											<label for="phone">Phone</label>
+											<input type="text" class="form-control" id="phone" name="phone" min="3"
+												max="200" value="+1 347 555 2277">
+										</div>
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input type="email" class="form-control" id="email" name="email"
+												value="maryam00@example.com">
+										</div>
+										<div class="float-right">
+											<button type="submit" class="btn btn_blue">Save</button>
+											<a href=""><button type="button" class="btn btn_gray">Cancel</button></a>
+										</div>
+									</form>
+
+									<form method="POST">
+										<input type="hidden" name="_method" value="DELETE">
+										<input type="hidden" name="_token" value="">
+										<button type="submit" class="btn-black btn btn-outline btn-circle btn-lg m-r-5"
+											data-toggle="tooltip" onclick="return confirm('Are you sure?');"
+											data-original-title="Delete">DELETE
+
+										</button>
+
+
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+
+			<div class="page-content container-fluid">
+				<div class="row">
+					<div class="col-12 col-lg-12">
+						<div class="tab-container">
+							<ul class="nav nav-tabs nav-tabs-classic" role="tablist">
+								<li class="nav-item"><a class="nav-link show active" href="#main" data-toggle="tab" role="tab"
+										aria-selected="false">Main</a></li>
+								<li class="nav-item"><a class="nav-link" href="#document" data-toggle="tab" role="tab"
+										aria-selected="true">Documents</a></li>
+								<li class="nav-item"><a class="nav-link" href="#visit" data-toggle="tab" role="tab"
+										aria-selected="true">Visits</a></li>
+								<li class="nav-item"><a class="nav-link" href="#file" data-toggle="tab" role="tab"
+										aria-selected="true">Files</a></li>
+								<li class="nav-item"><a class="nav-link" href="#treatment_plan" data-toggle="tab" role="tab"
+										aria-selected="true">Treatment plan</a></li>
+								<li class="nav-item"><a class="nav-link" href="#receipt" data-toggle="tab" role="tab"
+										aria-selected="true">Receipts</a></li>
+							</ul>
+							<div class="tab-content tabcontent-border mb-4 p-4">
+
+								<div class="tab-pane  show active" id="main" role="tabpanel">
+									<form method="POST" action="https://us.zubok-crm.com/admin/patient/304"
+										class="mt-4">
+										<input type="hidden" name="_method" value="PATCH"> <input type="hidden"
+											name="_token" value="Sz82EQnRzCOLMWoiy3SgVjjW0Zma4dXoiP40L4vs">
+
+										<div class="form-group">
+											<label for="name">First name</label>
+											<input type="text" class="form-control" value="Maryam">
+										</div>
+										<div class="form-group">
+											<label for="patronymic">Middle name</label>
+											<input type="text" class="form-control" min="3" max="200" value="Mahmoud">
+										</div>
+										<div class="form-group">
+											<label for="surname">Last name</label>
+											<input type="text" class="form-control" id="surname" name="surname" min="3"
+												max="200" value="Muhammed">
+										</div>
+										<div class="form-group">
+											<label for="date_of_birth">Date of birth</label>
+											<input type="date" class="form-control" id="date_of_birth"
+												name="date_of_birth" min="3" max="200" value="2000-04-27">
+										</div>
+										<div class="form-group">
+											<label>Gender</label>
+											<select class="form-control">
+												<option>Male</option>
+												<option selected="">Female</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="place_of_residence">Address, city, street, house number,
+												zip</label>
+											<input type="text" class="form-control" id="place_of_residence"
+												name="place_of_residence" min="3" max="200" value="Cairo, Egypt">
+										</div>
+										<div class="form-group">
+											<label for="phone">Phone</label>
+											<input type="text" class="form-control" id="phone" name="phone" min="3"
+												max="200" value="+1 347 555 2277">
+										</div>
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input type="email" class="form-control" id="email" name="email"
+												value="maryam00@example.com">
+										</div>
+										<div class="float-right">
+											<button type="submit" class="btn btn_blue">Save</button>
+											<a href=""><button type="button" class="btn btn_gray">Cancel</button></a>
+										</div>
+									</form>
+
+									<form method="POST">
+										<input type="hidden" name="_method" value="DELETE">
+										<input type="hidden" name="_token" value="">
+										<button type="submit" class="btn-black btn btn-outline btn-circle btn-lg m-r-5"
+											data-toggle="tooltip" onclick="return confirm('Are you sure?');"
+											data-original-title="Delete">DELETE
+
+										</button>
+
+
+									</form>
+								</div>
+
+
+								<div class="tab-pane" id="document" role="tabpanel">
+									<div class="table-responsive">
+										<table class="table">
+											<thead class="thead-primary">
+												<tr>
+													<th scope="col">Template name </th>
+													<th scope="col" colspan="2">Management</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr >
+													<td>Health history form</td>
+													<td>
+														<a href="health_history.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+
+								<div class="tab-pane" id="visit" role="tabpanel">
+									<div class="">
+										<div class="">
+											<table class="table">
+											<thead class="thead-primary">
+											  <tr>
+												    <th>#</th>
+													<th>Date</th>
+													<th>Doctor</th>
+													<th>Start time</th>
+													<th>End time</th>
+													<th>Comment</th>
+											  </tr>
+											</thead>
+
+											<tbody>
+											  <tr>
+												<td scope="row" class="scope" >10</td>
+												<td>1/4/2023</td>
+												<td>Hadeer Anwar</td>
+												<td>08:00</td>
+												<td>08:30</td>
+												<td>needs to do Xray</td>
+											  </tr>
+
+											 
+
+
+											  <tr>
+												<td scope="row" class="scope" >25</td>
+												<td>7/4/2023</td>
+												<td>Laila Hamdy</td>
+												<td>09:00</td>
+												<td>09:30</td>
+												<td>needs sergery</td>
+											  </tr>
+
+											  <tr>
+												<td scope="row" class="scope">19</td>
+												<td>15/4/2023</td>
+												<td>Hanaa Salah</td>
+												<td>10:00</td>
+												<td>10:30</td>
+												<td>Comment</td>
+											  </tr>
+
+											<tr>
+												<td scope="row" class="scope">14</td>
+												<td>27/4/2023</td>
+												<td>Nada Ahmed</td>
+												<td>11:00</td>
+												<td>11:30</td>
+												<td>Comment</td>
+											</tr>
+
+											<tr>
+												<td scope="row" class="scope">10</td>
+												<td>3/5/2023</td>
+												<td>Nada Abdelrahman</td>
+												<td>12:00</td>
+												<td>12:30</td>
+												<td>recovered</td>
+											</tr>
+
+
+											<tr>
+												<td scope="row" class="scope">11</td>
+												<td>27/4/2023</td>
+												<td>Mariam Ashraf</td>
+												<td>01:00</td>
+												<td>01:30</td>
+												<td>recovered</td>
+											</tr>
+
+											<tr>
+												<td scope="row" class="scope">12</td>
+												<td>27/4/2023</td>
+												<td>Hadeer Khalid</td>
+												<td>02:00</td>
+												<td>02:30</td>
+												<td>recovered</td>
+											</tr>
+
+
+											</tbody>
+										  </table>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="tab-pane" id="file" role="tabpanel">
+									<div class="">
+										
+									<!-- <table class="table">
+											<thead>
+												<tr>
+													<th scope="col">#</th>
+													<th scope="col">Date</th>
+													<th scope="col">Doctor</th>
+													<th scope="col">Title</th>
+													<th scope="col"></th>
+													<th scope="col">Management</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+										</table> -->
+										<div class="row">
+											<div id="yourBtn" onclick="getFile()" class="text-white p-2 col-md-8">
+												<div class="text-center">					 
+												 <div class="d-flex justify-content-center align-items-center position-relative">
+													 <div id="alt_img_to_drag"></div>
+													 <img src="images/upload_iconscout.png" class="" id="logo-img">
+												 </div>
+												 <canvas id="canvas" class="w-50 m-auto" style="cursor:crosshair"></canvas>
+												</div>
+											 </div>
+											 
+											 <div class="col-md-3 m-auto ml-4">
+												<div class="">
+													<button class="btn btn_blue" type="submit">Save Documents</button>
+												<button class="btn btn_gray" type="submit">Remove Documents</button>
+												</div>
+											 </div>
+											 
+										 </div>
+									</div>
+									
+										
+										
+									
+								</div>
+
+
+								<div class="tab-pane" id="treatment_plan" role="tabpanel">
+									<div class="table-responsive">
+										<table class="table">
+
+											<a href="" class="btn btn_blue m-t-10 mb-2 btn-lg half_rounded text-">Create</a>
+											<thead class="thead-primary">
+												<tr>
+													<th scope="col">Unique number</th>
+													<th scope="col">Date</th>
+													<th scope="col">Stage</th>
+													<th scope="col" colspan="2">Management</th>
+													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>11</td>
+													<td>28.04.2023</td>
+													<td>Stage 1</td>
+													<td>
+														<a href="treatment_plan.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="treatment_plan.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+
+
+
+													
+												</tr>
+												<tr>
+													<td>12</td>
+													<td>05.04.2023</td>
+													<td>Stage 2</td>
+													<td>
+														<a href="treatment_plan.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="treatment_plan.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+													
+												</tr>
+
+												<tr>
+													<td>13</td>
+													<td>14.04.2023</td>
+													<td>Stage 3</td>
+													<td>
+														<a href="treatment_plan.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="treatment_plan.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+													
+												</tr>
+
+												<tr>
+													<td>14</td>
+													<td>20.04.2023</td>
+													<td>Stage 4</td>
+													<td>
+														<a href="treatment_plan.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="treatment_plan.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+													
+												</tr>
+
+
+
+
+												<tr>
+													<td>15</td>
+													<td>30.04.2023</td>
+													<td>Stage 5</td>
+													<td>
+														<a href="treatment_plan.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="treatment_plan.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+													
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+
+
+								<div class="tab-pane" id="receipt" role="tabpanel">
+									<div class="table-responsive">
+										<table class="table">
+											<thead class="thead-primary">
+												<tr>
+													
+													<th scope="col">Doctor</th>
+													<th scope="col">Sum</th>
+													<th scope="col">Created</th>
+													<th scope="col" colspan="2">Management</th>
+													<!-- <th scope="col">
+														<a href="https://us.zubok-crm.com/admin/receipt/create"
+															class="btn btn-info btn-rounded m-t-10 mb-2 btn-lg"
+															data-toggle="tooltip" title="" data-original-title="Create">Create</a>
+													</th> -->
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													
+													<td>Laila Hamdy</td>
+													<td>20 L.E.</td>
+													<td>04-28-2023</td>
+													<td>
+														<a href="Billing/Invoice.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="Billing/Invoice.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+												</tr>
+
+												<tr>
+													
+													<td>Hadeer Anwar</td>
+													<td>50 L.E.</td>
+													<td>04-28-2023</td>
+													<td>
+														<a href="Billing/Invoice.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="Billing/Invoice.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+												</tr>
+
+												<tr>
+													
+													<td>Hanaa Salah</td>
+													<td>0 L.E.</td>
+													<td>04-28-2023</td>
+													<td>
+														<a href="Billing/Invoice.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="Billing/Invoice.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+												</tr>
+
+												<tr>
+													
+													<td>Marwa Helmy</td>
+													<td>40 L.E.</td>
+													<td>04-28-2023</td>
+													<td>
+														<a href="Billing/Invoice.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="Billing/Invoice.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+												</tr>
+
+
+												<tr>
+													
+													<td>Mariam Ashraf</td>
+													<td>100 L.E.</td>
+													<td>04-28-2023</td>
+													<td>
+														<a href="Billing/Invoice.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="Billing/Invoice.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+												</tr>
+
+												<tr>
+													
+													<td>Nada Ahmed</td>
+													<td>50 L.E.</td>
+													<td>04-28-2023</td>
+													<td>
+														<a href="Billing/Invoice.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="Billing/Invoice.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+												</tr>
+
+												<tr>
+													
+													<td>Nada Abdelrahman</td>
+													<td>90 L.E.</td>
+													<td>04-28-2023</td>
+													<td>
+														<a href="Billing/Invoice.html" data-toggle="tooltip"
+															title="" data-original-title="View">
+															
+																<i class="fas fa-eye "></i></a>
+													</td>
+													<td>
+														<a href="Billing/Invoice.html"
+															data-toggle="tooltip" title="" target="_blank"
+															data-original-title="Print">
+															
+																<i class="fas fa-edit"></i>
+															
+														</a>
+													</td>
+												</tr>
+
+												
+											</tbody>
+
+											
+												<a href="" class="btn btn_blue m-t-10 mb-2 btn-lg half_rounded text-">Create</a>
+											
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+	<!-- Jquery Library-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- Popper Library-->
+	<script src="js/popper.min.js"></script>
+	<!-- Bootstrap Library-->
+	<script src="js/bootstrap.min.js"></script>
+	
+	
+	<!-- Datatable  -->
+	<script src="datatable/jquery.dataTables.min.js"></script>
+	<script src="datatable/dataTables.bootstrap4.min.js"></script>
+	
+	<!-- Custom Script-->
+	<script src="js/custom.js"></script>
+	<script src="js/edit_patient.js"></script>
+
+</body>
+</html>

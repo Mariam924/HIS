@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Issued Items</title>
+
+
+	<!-- Fav  Icon Link -->
+	<link rel="shortcut icon" type="image/png" href="../images/d.png">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<!-- themify icons CSS -->
+	<!-- <link rel="stylesheet" href="css/themify-icons.css"> -->
+	<!-- Animations CSS -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/red.css" id="style_theme">
+	<link rel="stylesheet" href="../css/responsive.css">
+	<!-- morris charts -->
+	<link rel="stylesheet" href="../charts/css/morris.css">
+	<!-- jvectormap -->
+	<link rel="stylesheet" href="../css/jquery-jvectormap.css">
+	<link rel="stylesheet" href="../css/my_style.css">
+
+	<script src="../js/modernizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Bruno+Ace&family=Chivo:wght@300;400;500;600;700;800;900&family=Lobster&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<nav id="sidebar" class="proclinic-bg">
+			<div class="sidebar-header">
+				<div class="ml-3">
+				  <img src="../images/d.png" class="logo w-20 mb-4 d-inline" alt="logo"><h2 class="d-inline pt-5 mt-6 font-w600 header_font ml-0">entque.</h2>
+				</div>			
+			</div>
+			<ul class="list-unstyled components">
+			  <li class="">					
+				  <a href="../index.html" class="ml-3">Dashboard</a>					
+				<li class="ml-3">				 
+				   <a href="../calender.html" aria-expanded="false">
+					 <span class="ml-3 mb-3">Schedule</span>
+				   </a>					 
+				 </li>
+			  </li>
+		
+					  <li class="mt-4">
+				<a href="#nav-appoint" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Appointments</span>
+				</a>
+				<ul class="collapse list-unstyled new-round rounded" id="nav-appoint">
+				  <li>
+					<a href="../Appointments/add_appointment.html">Add Appointment</a>
+				  </li>
+				  <li>
+					<a href="../Appointments/edit_appointment.html">Edit Appointment</a>
+				  </li>
+				  <li>
+					<a href="../Appointments/all_appointment.html">All Appointments</a>
+				  </li>
+				  
+				</ul>
+			  </li>
+		
+			  
+			  <li class="mt-4 ">
+				<a href="#nav-patients" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Patients</span>
+				</a>
+				<ul class="collapse list-unstyled new-round rounded" id="nav-patients">
+				  <li>
+					<a href="../add_patient.html">Add Patient</a>
+				  </li>
+				  <li>
+					<a href="../all_patients.html">All Patients</a>
+				  </li>
+				  <li>
+					<a href="../edit_patient.html">Edit Patient</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  <li>
+				<a href="#nav-doctors" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3 ">Doctors</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-doctors">
+				  <li>
+					<a href="../Doctors/add_doctor.html">Add Doctor</a>
+				  </li>
+				  <li>
+					<a href="../Doctors/all_doctors.html">All Doctors</a>
+				  </li>
+				  <li>
+					<a href="../Doctors/edit_doctor.html">Edit Doctor</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  <li>
+				<a href="#nav-Staff" data-toggle="collapse" aria-expanded="false"> 
+				  <span class="ml-3 ">Staff</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-Staff">
+				  <li>
+					<a href="../Staff/add_staff.html">Add Staff</a>
+				  </li>
+				  <li>
+					<a href="../Staff/all_Staff.html">All Staff</a>
+				  </li>
+				  <li>
+					<a href="../Staff/edit_staff.html">Edit Staff</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  
+			  <li class="">
+				<a href="#nav-appointment" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Billing</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-appointment">
+				  <li>
+					<a href="../Billing/add_billing.html">Add Billing</a>
+				  </li>
+				  <li>
+					<a href="../Billing/bill_list.html">Billing List</a>
+				  </li>
+		
+				  <li>
+					<a href="../Billing/Invoice.html">Invoice</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  <li class="active">
+				<a href="#nav-units" data-toggle="collapse" aria-expanded="false">
+				  <span class="">Inventory</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-units">
+				  <li>
+					<a href="../Units/add_unit.html">Add Unit</a>
+				  </li>
+				  <li>
+					<a href="../Units/edit_unit.html">Edit Unit</a>
+				  </li>
+				  <li>
+					<a href="../Units/stock_units.html">Item Stock List</a>
+				  </li>
+				  <li>
+					<a href="../Units/Issued_units.html">Issued Items</a>
+				  </li>
+				</ul>
+			  </li>
+		
+			  <li>
+				<a href="#nav-services" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3 ">Services</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-services">
+				  <li>
+					<a href="../Services/add_service.html">Add Service</a>
+				  </li>
+				  <li>
+					<a href="../Services/edit_service.html">Edit Service</a>
+				  </li>
+				  <li>
+					<a href="../Services/cato.html">Services Categories</a>
+				  </li>
+				  <li>
+					<a href="../Services/all_services.html">All Services</a>
+				  </li>
+				  
+				</ul>
+			  </li>
+		
+		
+			  <li class="">
+				<a href="../chat.html">
+				  <span class="ml-3">Chat</span>
+				</a>
+			  </li>
+		
+			</ul>
+			<div class="nav-help animated fadeIn m-3 rounded-gray position-relative p-3">
+			  <img src="../images/help_trans.png"  class= 'w-100 position-absolute help-img' alt="">
+			  <p class="copyright-text text-dark text-center">Have any question or need further assistance?</p>
+			  <button class="button1">Ask Now!</button>
+			</div>
+		  </nav>
+
+
+
+
+
+		<div id="content">
+			<div class="row mt-4 ml-3 text-dark">
+				<div class="col-md-6">
+					<h3 class="block-title">Issued Itmems List</h3>
+				</div>
+				<div class="col-md-6">
+					<ol class="breadcrumb text-dark">						
+						<li class="breadcrumb-item">
+							<a href="../index.html">
+								<span class="ti-home"></span>
+							</a>
+                        </li>
+                        <li class="breadcrumb-item active">Items</li>
+						<li class="breadcrumb-item active">Issued Items</li>
+					</ol>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget-area-2 proclinic-box-shadow">					
+							<div class="table-responsive mb-3">
+								<div id="tableId_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+									<div class="row">
+										<div class="col-lg-3 mb-3 mb-lg-0">
+											<div class="input-group">
+												<div class="input-group-append padding-search">													
+													<input type="text" id="searchKey" class="form-control form-sm searchBtn mb-3 " placeholder="Search..." aria-label="Search..." aria-describedby="search" name="phrase" value=""> 													
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<table id="tableId" class="table table-bordered table-striped dataTable no-footer" role="grid"
+												aria-describedby="tableId_info">
+ 									<thead class="thead-primary">
+										<tr role="row">
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="Unit ID: activate to sort column ascending" style="width: 100.741px;">Unit Code</th>
+                                               
+
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="Unit Name: activate to sort column ascending" style="width: 180.803px;">Unit Name</th>
+
+											
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="last Visit: activate to sort column ascending" style="width: 122.179px;">Price <span class="font-sm">(per Item)</span></th>
+                                                <th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="last Visit: activate to sort column ascending" style="width: 122.179px;">Amount</span></th>
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="Status: activate to sort column ascending" style="width: 116.204px;">Purchase date</th>
+                                                <th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="Status: activate to sort column ascending" style="width: 116.204px;">Status</th>
+											
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="Status: activate to sort column ascending" style="width: 116.204px;">Action</th>
+
+											</tr>
+									</thead>
+									<tbody>
+										
+							
+									<tr role="row" class="odd">
+                                        <td>#211</td>
+                                        <td>Dental Chair </td>
+                                        
+                                        <td>3900L.E</td>
+                                        <td>10</td>
+                                        <td>
+                                            01/05/2023
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">Issued</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+
+									<tr role="row" class="odd">
+                                        <td>#212</td>
+                                        <td>Dental Laser </td>
+                                        
+                                        <td>1200L.E</td>
+                                        <td>4</td>
+                                        <td>
+                                           25/05/2022
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Returned</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+
+									<tr role="row" class="odd">
+                                        <td>#213</td>
+                                        <td>Dental pliers </td>
+
+                                        <td>250L.E</td>
+                                        <td>8</td>
+                                        <td>
+                                            30/05/2022
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">Issued</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+
+									<tr role="row" class="odd">
+                                        <td>#214</td>
+                                        <td>Drill </td>
+                                        <td>6000L.E</td>
+                                        <td>8</td>
+                                        <td>
+                                            12/4/2023
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Returned</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+
+									<tr role="row" class="odd">
+                                        <td>#215</td>
+                                        <td>Tissue Forceps </td>
+                                        <td>30L.E</td>
+                                        <td>1</td>
+                                        <td>
+                                            21/07/2020
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">Issued</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+
+									<tr role="row" class="odd">
+                                        <td>#216</td>
+                                        <td>Meeting Table </td>
+
+                                        <td>6200L.E</td>
+                                        <td>1</td>
+                                        <td>
+                                           23/12/2022
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Returned</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+
+									<tr role="row" class="odd">
+                                        <td>#217</td>
+                                        <td>Reception Chairs</td>
+                                        <td>1100L.E</td>
+                                        <td>12</td>
+                                        <td>
+                                           25/07/2022
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">Issued</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+
+
+									<tr role="row" class="odd">
+                                        <td>#218</td>
+                                        <td>Generator </td>
+                                        <td>50000L.E</td>
+                                        <td>1</td>
+                                        <td>
+                                            24/07/2022
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Returned</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+
+
+									<tr role="row" class="odd">
+                                        <td>#219</td>
+                                        <td>Hanbkam</td>
+                                        <td>39000L.E</td>
+                                        <td>1</td>
+                                        <td>
+                                           12/08/2022
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">Issued</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+
+
+									<tr role="row" class="odd">
+                                        <td>#220</td>
+                                        <td>Electrical Waxer </td>
+                                        <td>4900L.E</td>
+                                        <td>1</td>
+                                        <td>
+                                            12/06/2022
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">Returned</span>
+                                        </td>
+												
+											<td class="m-auto ">
+												<div class="cont">
+													<a href="#" class="trigger-drop">
+														<i class="fas fa-cog"></i>
+														<i class="fa-solid fa-caret-down"></i>
+													</a>
+													<ul class="options_list">
+														<li><i class="fa-sharp fa-solid fa-eye mr-2"></i> View</li>
+														<li><i class="fa-solid fa-pen mr-2"></i> Edit</li>
+														<li><i class="fa-solid fa-trash mr-2"></i> Delete</li>
+														
+													</ul>
+												</div>										
+											</td>
+									</tr>
+                                </tbody>
+								</table>
+								</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 col-md-5">
+									</div>
+									<div class="col-sm-12 col-md-7 m-auto">
+										<div class="dataTables_paginate paging_simple_numbers" id="tableId_paginate">
+											<ul class="pagination">
+												<li class="paginate_button page-item previous disabled" id="tableId_previous"><a href="#"
+														aria-controls="tableId" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+												<li class="paginate_button page-item active"><a href="#" aria-controls="tableId" data-dt-idx="1"
+														tabindex="0" class="page-link">1</a></li>
+												<li class="paginate_button page-item "><a href="#" aria-controls="tableId" data-dt-idx="2" tabindex="0"
+														class="page-link">2</a></li>
+												<li class="paginate_button page-item next" id="tableId_next"><a href="#" aria-controls="tableId"
+														data-dt-idx="3" tabindex="0" class="page-link">Next</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								</div>
+								
+								<div class="mb-5">
+									<button type="button" class="btn btn-black mt-3 mb-0 position-absolute cancel ml-3"><span class="ti-pencil-alt"></span> EDIT</button>
+								<button type="button" class="btn btn-black mt-3 mb-0 position-absolute ml-4 float-left"> Delete</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<a id="back-to-top" href="#" class="back-to-top">
+		<span class="ti-angle-up"></span>
+	</a>
+	<!-- /Back to Top -->
+	<!-- Jquery Library-->
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<!-- Popper Library-->
+	<script src="../js/popper.min.js"></script>
+	<!-- Bootstrap Library-->
+    <script src="../js/bootstrap.min.js"></script>
+    
+    
+	<!-- Custom Script-->
+	<script src="../js/custom.js"></script>
+
+</body>
+
+</html>

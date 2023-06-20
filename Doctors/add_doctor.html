@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Add Doctor</title>
+
+
+	<!-- Fav  Icon Link -->
+	<link rel="shortcut icon" type="image/png" href="../images/d.png">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<!-- themify icons CSS -->
+	<!-- <link rel="stylesheet" href="css/themify-icons.css"> -->
+	<!-- Animations CSS -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/red.css" id="style_theme">
+	<link rel="stylesheet" href="../css/responsive.css">
+	<!-- morris charts -->
+	<link rel="stylesheet" href="../charts/css/morris.css">
+	<!-- jvectormap -->
+	<link rel="stylesheet" href="../css/jquery-jvectormap.css">
+	<link rel="stylesheet" href="../css/my_style.css">
+
+	<script src="../js/modernizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Bruno+Ace&family=Chivo:wght@300;400;500;600;700;800;900&family=Lobster&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="proclinic-bg">
+			<div class="sidebar-header">
+				<div class="ml-3">
+				  <img src="../images/d.png" class="logo w-20 mb-4 d-inline" alt="logo"><h2 class="d-inline pt-5 mt-6 font-w600 header_font ml-0">entque.</h2>
+				</div>			
+			</div>
+			<ul class="list-unstyled components">
+			  <li class="">					
+				  <a href="../index.html" class="ml-3">Dashboard</a>					
+				<li class="ml-3">				 
+				   <a href="../calender.html" aria-expanded="false">
+					 <span class="ml-3 mb-3">Schedule</span>
+				   </a>					 
+				 </li>
+			  </li>
+		
+					  <li class="mt-4">
+				<a href="#nav-appoint" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Appointments</span>
+				</a>
+				<ul class="collapse list-unstyled new-round rounded" id="nav-appoint">
+				  <li>
+					<a href="../Appointments/add_appointment.html">Add Appointment</a>
+				  </li>
+				  <li>
+					<a href="../Appointments/edit_appointment.html">Edit Appointment</a>
+				  </li>
+				  <li>
+					<a href="../Appointments/all_appointment.html">All Appointments</a>
+				  </li>
+				  
+				</ul>
+			  </li>
+		
+			  
+			  <li class="mt-4 ">
+				<a href="#nav-patients" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Patients</span>
+				</a>
+				<ul class="collapse list-unstyled new-round rounded" id="nav-patients">
+				  <li>
+					<a href="../add_patient.html">Add Patient</a>
+				  </li>
+				  <li>
+					<a href="../all_patients.html">All Patients</a>
+				  </li>
+				  <li>
+					<a href="../edit_patient.html">Edit Patient</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  <li class="active">
+				<a href="#nav-doctors" data-toggle="collapse" aria-expanded="false">
+				  <span class="">Doctors</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-doctors">
+				  <li>
+					<a href="add_doctor.html">Add Doctor</a>
+				  </li>
+				  <li>
+					<a href="all_doctors.html">All Doctors</a>
+				  </li>
+				  <li>
+					<a href="edit_doctor.html">Edit Doctor</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  <li class="">
+				<a href="#nav-Staff" data-toggle="collapse" aria-expanded="false"> 
+				  <span class="ml-3">Staff</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-Staff">
+				  <li>
+					<a href="../Staff/add_staff.html">Add Staff</a>
+				  </li>
+				  <li>
+					<a href="../Staff/all_staff.html">All Staff</a>
+				  </li>
+				  <li>
+					<a href="../Staff/edit_staff.html">Edit Staff</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  
+			  <li class="">
+				<a href="#nav-appointment" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Billing</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-appointment">
+				  <li>
+					<a href="../Billing/add_billing.html">Add Billing</a>
+				  </li>
+				  <li>
+					<a href="../Billing/bill_list.html">Billing List</a>
+				  </li>
+		
+				  <li>
+					<a href="../Billing/Invoice.html">Invoice</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  <li class="">
+				<a href="#nav-units" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Inventory</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-units">
+				  <li>
+					<a href="../Units/add_unit.html">Add Unit</a>
+				  </li>
+				  <li>
+					<a href="../Units/edit_unit.html">Edit Unit</a>
+				  </li>
+				  <li>
+					<a href="../Units/stock_units.html">Item Stock List</a>
+				  </li>
+				  <li>
+					<a href="../Units/Issued_units.html">Issued Items</a>
+				  </li>
+				</ul>
+			  </li>
+		
+			  <li class="">
+				<a href="#nav-services" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Services</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-services">
+				  <li>
+					<a href="../Services/add_service.html">Add Service</a>
+				  </li>
+				  <li>
+					<a href="../Services/edit_service.html">Edit Service</a>
+				  </li>
+				  <li>
+					<a href="../Services/cato.html">Services Categories</a>
+				  </li>
+				  <li>
+					<a href="../Services/all_services.html">All Services</a>
+				  </li>
+				  
+				</ul>
+			  </li>
+		
+		
+			  <li class="">
+				<a href="../chat.html">
+				  <span class="ml-3">Chat</span>
+				</a>
+			  </li>
+		
+			</ul>
+			<div class="nav-help animated fadeIn m-3 rounded-gray position-relative p-3">
+			  <img src="../images/help_trans.png"  class= 'w-100 position-absolute help-img' alt="">
+			  <p class="copyright-text text-dark text-center">Have any question or need further assistance?</p>
+			  <button class="button1">Ask Now!</button>
+			</div>
+		  </nav>
+
+
+
+
+
+
+		
+		<div id="content">
+			<div class="row mt-4 ml-3">
+				<div class="col-md-6">
+					<h3 class="block-title">Add Doctor</h3>
+				</div>
+				<div class="col-md-6">
+					<ol class="breadcrumb">						
+						<li class="breadcrumb-item">
+							<a href="index.html">
+								<span class="ti-home"></span>
+							</a>
+                        </li>
+                        <li class="breadcrumb-item">Doctors</li>
+						<li class="breadcrumb-item active">Add Doctors</li>
+					</ol>
+				</div>
+			</div>
+
+
+
+			<div class="container-fluid">
+
+				<div class="row m-auto hello-div mt-5 constant_div add_doctor">
+
+					<div class="w-50">
+						<div class=" pt-3 col-lg-7 ">
+							<p class="font-7 add-pro hey-text">Hey Maryam<span class="ps-1" id="userName"></span><span>,</span></p>
+							<p class="hey-text">Add a new doctor</p>
+						</div>
+					</div>
+			
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget-area-2 proclinic-box-shadow">
+							<form>
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="patient-name">Doctor Name</label>
+										<input type="text" class="form-control" placeholder="doctor name" id="doctor-name">
+									</div>
+									<!-- <div class="form-group col-md-6">
+										<label for="dob">Date Of Birth</label>
+										<input type="date" placeholder="Date of Birth" class="form-control" id="dob">
+									</div> -->
+									<!-- <div class="form-group col-md-6">
+										<label for="age">Address</label>
+										<input type="text" placeholder="Address" class="form-control" id="age">
+									</div> -->
+
+                                    
+
+									<div class="form-group col-md-6">
+										<label for="phone">Phone</label>
+										<input type="text" placeholder="Phone" class="form-control" id="phone">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="email">Email</label>
+										<input type="email" placeholder="email" class="form-control" id="Email">
+									</div>
+                                    <div class="form-group col-md-6">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" min="5" required="" name="password">
+                                    </div>
+									<div class="form-group col-md-6">
+										<label for="gender">Gender</label>
+										<select class="form-control" id="gender">
+											<option>Male</option>
+											<option>Female</option>
+										</select>
+										</div>
+										
+										
+										<div class="row">
+											<div class="col-12 col-lg-12">
+												<div class="tab-container">
+													<ul class="nav nav-tabs nav-tabs-classic" role="tablist">
+														<li class="nav-item">
+															<a class="nav-link show active" href="#main_page" data-toggle="tab" role="tab"
+																aria-selected="true">Schedule
+															</a>
+														</li>
+														<li class="nav-item"><a class="nav-link" href="#receipt" data-toggle="tab" role="tab"
+																aria-selected="false">Billing</a></li>
+														<li class="nav-item"><a class="nav-link" href="#patient" data-toggle="tab" role="tab"
+																aria-selected="false">Patients</a></li>
+														<li class="nav-item"><a class="nav-link " href="#doctor" data-toggle="tab" role="tab"
+																aria-selected="false">Doctors</a></li>
+																<li class="nav-item"><a class="nav-link " href="#doctor" data-toggle="tab" role="tab"
+																	aria-selected="false">Staff</a></li>
+														<li class="nav-item"><a class="nav-link" href="#category_service" data-toggle="tab" role="tab"
+																aria-selected="false">Categories of services</a></li>
+														<li class="nav-item"><a class="nav-link" href="#service" data-toggle="tab" role="tab"
+																aria-selected="false">Units</a></li>
+														<li class="nav-item"><a class="nav-link" href="#report" data-toggle="tab" role="tab"
+																aria-selected="false">Reports</a></li>
+														<li class="nav-item"><a class="nav-link" href="#setting" data-toggle="tab" role="tab"
+																aria-selected="false">Settings</a></li>
+													</ul>
+													<div class="tab-content tabcontent-border mb-4 p-4">
+														<div class="tab-pane show active" id="main_page" role="tabpanel">
+															<div class="col-12 bt-switch">
+																<label for="control_calendar">
+																	Calendar management
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+														</div>
+														<div class="tab-pane" id="receipt" role="tabpanel">
+															<div class="col-12 bt-switch">
+																<label for="show_receipt">
+																	Viewing receipts
+																</label>
+																<!-- <div class="float-right">
+																	<div class="bootstrap-switch-off bootstrap-switch-id-show_receipt bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate"
+																		style="width: 101.468px;">
+																		<div class="bootstrap-switch-container" style="width: 150px; margin-left: -50px;"><span
+																				class="bootstrap-switch-handle-on bootstrap-switch-success"
+																				style="width: 50px;">ON</span><span class="bootstrap-switch-label"
+																				style="width: 50px;">&nbsp;</span><span
+																				class="bootstrap-switch-handle-off bootstrap-switch-warning"
+																				style="width: 50px;">OFF</span><input type="checkbox" data-on-color="success"
+																				data-off-color="warning" id="show_receipt" name="permission[17]"></div>
+																	</div>
+																</div> -->
+
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="add_receipt">
+																	Creating receipts
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="edit_receipt">
+																	Editing receipts
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="delete_receipt">
+																	Deleting receipts
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+														</div>
+														<div class="tab-pane" id="patient" role="tabpanel">
+															<div class="col-12 bt-switch">
+																<label for="show_patient">
+																	Patient Viewing
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="add_patient">
+																	Creating patients
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="edit_patient">
+																	Editing patients
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="delete_patient">
+																	Removing patients
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+														</div>
+														<div class="tab-pane" id="doctor" role="tabpanel">
+															<div class="col-12 bt-switch">
+																<label for="show_user">
+																	Viewing Doctors
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="add_user">
+																	Creating Doctors
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="edit_user">
+																	Editing Physicians
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="delete_user">
+																	Removal of doctors
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+														</div>
+														<div class="tab-pane" id="category_service" role="tabpanel">
+															<div class="col-12 bt-switch">
+																<label for="show_category_service">
+																	Viewing service categories
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="add_category_service">
+																	Creating service categories
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="edit_category_service">
+																	Editing service categories
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="delete_category_service">
+																	Deleting service categories
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+														</div>
+														<div class="tab-pane" id="service" role="tabpanel">
+															<div class="col-12 bt-switch">
+																<label for="show_service">
+																	Viewing services
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="add_service">
+																	Creation of services
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="edit_service">
+																	Editing services
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="delete_service">
+																	Deleting services
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+														</div>
+														<div class="tab-pane" id="report" role="tabpanel">
+															<div class="col-12 bt-switch">
+																<label for="block_reports">
+																	Access to reports
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="show_main_report">
+																	Viewing the main report
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+														</div>
+														<div class="tab-pane" id="setting" role="tabpanel">
+															<div class="col-12 bt-switch">
+																<label for="block_setting">
+																	Access to settings
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+															<div class="col-12 bt-switch">
+																<label for="control_cabinet_calendar_setting">
+																	Setting up the clinic offices
+																</label>
+																<label class="switch float-right">
+																	<input type="checkbox" />
+																	<div class="slider slider--0">ON</div>
+																	<div class="slider slider--1">
+																	  <div></div>
+																	  <div></div>
+																	</div>
+																	<div class="slider slider--2"></div>
+																	<div class="slider slider--3">OFF</div>
+																  </label>
+															</div>
+															<hr>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+										<!-- <div class="form-group col-md-12">
+																				<label for="exampleFormControlTextarea1">Notes</label>
+																				<textarea placeholder="Write doctor notes here .." class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+																				
+																			</div> -->
+										
+										
+										<!-- <div class="col-lg-12 main-section mb-4">
+																				<form action="/examples/actions/confirmation.php" method="post" class="card p-2 part-upload">
+																
+																					<h3 class="pt-1 mb-2">Add Medical Documents</h3>
+																					<p class="mb-4">Click to upload a doctor dental documents.</p>
+																						 <div class="row">
+																							<div id="yourBtn" onclick="getFile()" class="text-white p-2 col-md-8">
+																								<div class="text-center">					 
+																								 <div class="d-flex justify-content-center align-items-center position-relative">
+																									 <div id="alt_img_to_drag"></div>
+																									 <img src="images/upload_iconscout.png" class="" id="logo-img">
+																								 </div>
+																								 <canvas id="canvas" class= "w-50 m-auto" style="cursor:crosshair"></canvas>
+																								</div>
+																							 </div> 
+																							 
+																							 <div class="col-md-4 mt-5 ">
+																			
+																								<div class="mt-5">
+																									<div class="col-lg-6 mx-auto">
+																										<a class="btn" id="delete" onclick="removeCanvas()">Remove Documents</a>
+																									</div>
+																								</div>
+																							   
+																							 </div>
+																						 </div>
+																					 <p>
+																				
+																							  
+																					 </p>        
+																				 </form>
+																			</div> -->
+										
+										<!-- <div class="form-check col-md-12 mb-2">
+																				<div class="text-left">
+																					<div class="custom-control custom-checkbox">
+																						<input class="custom-control-input" type="checkbox" id="ex-check-2">
+																						<label class="custom-control-label" for="ex-check-2">Please Confirm</label>
+																					</div>
+																				</div>
+																			</div> -->
+										<div class="form-group  mb-3">
+											<div>
+												<button type="submit" class="btn btn-black">Add doctor </button>
+												<button type="submit" class="btn btn-black">Cancel </button>
+											</div>
+										</div>
+										</div>
+										</form>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a id="back-to-top" href="#" class="back-to-top">
+		<span class="ti-angle-up"></span>
+	</a>
+
+
+	<!-- /Back to Top -->
+	<!-- Jquery Library-->
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<!-- Popper Library-->
+	<script src="../js/popper.min.js"></script>
+	<!-- Bootstrap Library-->
+    <script src="../js/bootstrap.min.js"></script>
+    
+    <!-- Datatable  -->
+<!-- 	<script src="datatable/jquery.dataTables.min.js"></script>
+	<script src="datatable/dataTables.bootstrap4.min.js"></script> -->
+    
+	<!-- Custom Script-->
+	<script src="js/custom.js"></script>
+	
+
+</body>
+
+</html>

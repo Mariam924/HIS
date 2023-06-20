@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>All Doctors</title>
+
+
+	<!-- Fav  Icon Link -->
+	<link rel="shortcut icon" type="image/png" href="../images/d.png">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<!-- themify icons CSS -->
+	<!-- <link rel="stylesheet" href="css/themify-icons.css"> -->
+	<!-- Animations CSS -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/red.css" id="style_theme">
+	<link rel="stylesheet" href="../css/responsive.css">
+	<!-- morris charts -->
+	<link rel="stylesheet" href="../charts/css/morris.css">
+	<!-- jvectormap -->
+	<link rel="stylesheet" href="../css/jquery-jvectormap.css">
+	<link rel="stylesheet" href="../css/my_style.css">
+
+	<script src="../js/modernizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Bruno+Ace&family=Chivo:wght@300;400;500;600;700;800;900&family=Lobster&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<nav id="sidebar" class="proclinic-bg">
+			<div class="sidebar-header">
+				<div class="ml-3">
+				  <img src="../images/d.png" class="logo w-20 mb-4 d-inline" alt="logo"><h2 class="d-inline pt-5 mt-6 font-w600 header_font ml-0">entque.</h2>
+				</div>			
+			</div>
+			<ul class="list-unstyled components">
+			  <li class="">					
+				  <a href="../index.html" class="ml-3">Dashboard</a>					
+				<li class="ml-3">				 
+				   <a href="../calender.html" aria-expanded="false">
+					 <span class="ml-3 mb-3">Schedule</span>
+				   </a>					 
+				 </li>
+			  </li>
+		
+					  <li class="mt-4">
+				<a href="#nav-appoint" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Appointments</span>
+				</a>
+				<ul class="collapse list-unstyled new-round rounded" id="nav-appoint">
+				  <li>
+					<a href="../Appointments/add_appointment.html">Add Appointment</a>
+				  </li>
+				  <li>
+					<a href="../Appointments/edit_appointment.html">Edit Appointment</a>
+				  </li>
+				  <li>
+					<a href="../Appointments/all_appointment.html">All Appointments</a>
+				  </li>
+				  
+				</ul>
+			  </li>
+		
+			  
+			  <li class="mt-4 ">
+				<a href="#nav-patients" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Patients</span>
+				</a>
+				<ul class="collapse list-unstyled new-round rounded" id="nav-patients">
+				  <li>
+					<a href="../add_patient.html">Add Patient</a>
+				  </li>
+				  <li>
+					<a href="../all_patients.html">All Patients</a>
+				  </li>
+				  <li>
+					<a href="../edit_patient.html">Edit Patient</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  <li class="active">
+				<a href="#nav-doctors" data-toggle="collapse" aria-expanded="false">
+				  <span class="">Doctors</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-doctors">
+				  <li>
+					<a href="add_doctor.html">Add Doctor</a>
+				  </li>
+				  <li>
+					<a href="all_doctors.html">All Doctors</a>
+				  </li>
+				  <li>
+					<a href="edit_doctor.html">Edit Doctor</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  <li class="">
+				<a href="#nav-Staff" data-toggle="collapse" aria-expanded="false"> 
+				  <span class="ml-3">Staff</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-Staff">
+				  <li>
+					<a href="../Staff/add_staff.html">Add Staff</a>
+				  </li>
+				  <li>
+					<a href="../Staff/all_staff.html">All Staff</a>
+				  </li>
+				  <li>
+					<a href="../Staff/edit_staff.html">Edit Staff</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  
+			  <li class="">
+				<a href="#nav-appointment" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Billing</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-appointment">
+				  <li>
+					<a href="../Billing/add_billing.html">Add Billing</a>
+				  </li>
+				  <li>
+					<a href="../Billing/bill_list.html">Billing List</a>
+				  </li>
+		
+				  <li>
+					<a href="../Billing/Invoice.html">Invoice</a>
+				  </li>
+				</ul>
+			  </li>
+		
+		
+			  <li class="">
+				<a href="#nav-units" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Inventory</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-units">
+				  <li>
+					<a href="../Units/add_unit.html">Add Unit</a>
+				  </li>
+				  <li>
+					<a href="../Units/edit_unit.html">Edit Unit</a>
+				  </li>
+				  <li>
+					<a href="../Units/stock_units.html">Item Stock List</a>
+				  </li>
+				  <li>
+					<a href="../Units/Issued_units.html">Issued Items</a>
+				  </li>
+				</ul>
+			  </li>
+		
+			  <li class="">
+				<a href="#nav-services" data-toggle="collapse" aria-expanded="false">
+				  <span class="ml-3">Services</span>
+				</a>
+				<ul class="collapse list-unstyled new-round" id="nav-services">
+				  <li>
+					<a href="../Services/add_service.html">Add Service</a>
+				  </li>
+				  <li>
+					<a href="../Services/edit_service.html">Edit Service</a>
+				  </li>
+				  <li>
+					<a href="../Services/cato.html">Services Categories</a>
+				  </li>
+				  <li>
+					<a href="../Services/all_services.html">All Services</a>
+				  </li>
+				  
+				</ul>
+			  </li>
+		
+		
+			  <li class="">
+				<a href="../chat.html">
+				  <span class="ml-3">Chat</span>
+				</a>
+			  </li>
+		
+			</ul>
+			<div class="nav-help animated fadeIn m-3 rounded-gray position-relative p-3">
+			  <img src="../images/help_trans.png"  class= 'w-100 position-absolute help-img' alt="">
+			  <p class="copyright-text text-dark text-center">Have any question or need further assistance?</p>
+			  <button class="button1">Ask Now!</button>
+			</div>
+		  </nav>
+
+
+
+
+
+		<div id="content">
+			<div class="row mt-4 ml-3 text-dark">
+				<div class="col-md-6">
+					<h3 class="block-title">Doctors List</h3>
+				</div>
+				<div class="col-md-6">
+					<ol class="breadcrumb text-dark">						
+						<li class="breadcrumb-item">
+							<a href="index.html">
+								<span class="ti-home"></span>
+							</a>
+                        </li>
+                        <li class="breadcrumb-item active">Doctors</li>
+						<li class="breadcrumb-item active">All Doctors</li>
+					</ol>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget-area-2 proclinic-box-shadow">					
+							<div class="table-responsive mb-3">
+								<div id="tableId_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+									<div class="row">
+										<div class="col-lg-3 mb-3 mb-lg-0">
+											<div class="input-group">
+												<div class="input-group-append padding-search">													
+													<input type="text" id="searchKey" class="form-control form-sm searchBtn mb-3 " placeholder="Search..." aria-label="Search..." aria-describedby="search" name="phrase" value=""> 													
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<table id="tableId" class="table table-bordered table-striped dataTable no-footer" role="grid"
+												aria-describedby="tableId_info">
+ 									<thead class="thead-primary">
+										<tr role="row">
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="Patient ID: activate to sort column ascending" style="width: 100.741px;">Doctor ID</th>
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="Patient Name: activate to sort column ascending" style="width: 180.803px;">Doctor Name</th>
+
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="Phone: activate to sort column ascending" style="width: 139.759px;">Phone </th>
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="last Visit: activate to sort column ascending" style="width: 122.179px;">Experience <span class="font-sm">(in years)</span></th>
+											<th class="sorting" tabindex="0" aria-controls="tableId" rowspan="1" colspan="1"
+												aria-label="Status: activate to sort column ascending" style="width: 116.204px;">Availability</th>
+
+                                                <!-- <th class="sorting" colspan="2" style="width: 116.204px;">Management</th> -->
+											</tr>
+                                            
+											
+                                            <!-- <thead class="thead-primary">
+                                                <tr>
+                                                    <th scope="col">Doctor ID</th>
+                                                        <th scope="col">Doctor Name</th>
+                                                        <th scope="col">Phone</th>
+                                                        <th scope="col">Experience <span class="font-sm">(in years)</span></th>
+                                                        <th scope="col">Availability</th>
+                                                   
+                                                        
+                                                        
+    
+    
+    
+                                                </tr>
+											</thead> -->
+                                           
+									</thead>
+									<tbody>
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+									<tr role="row" class="odd">
+											<td>1</td>
+											<td>Maryam Mahmoud</td>
+											<td>333-444-7777</td>
+											<td>15</td>
+											<td>
+												<span class="badge badge-success">Available</span>
+										<!-- 	</td>                                       
+                                                <td class="text-center">
+                                                    <a href="https://us.zubok-crm.com/admin/receipt/23" data-toggle="tooltip"
+                                                        title="" data-original-title="View">
+                                                        
+                                                            <i class="fas fa-eye "></i></a>
+                                                </td>
+                                                <td>
+                                                    <a href="https://us.zubok-crm.com/admin/receipt/23/print"
+                                                        data-toggle="tooltip" title="" target="_blank"
+                                                        data-original-title="Print">
+                                                        
+                                                            <i class="fas fa-edit ml-3"></i>
+                                                        
+                                                    </a>
+                                                </td> -->
+										</tr><tr role="row" class="even">
+											<td>2</td>
+											<td>Nouran Mohamed </td>
+											
+											<td>3423-232-987</td>
+											<td>10</td>
+											<td>
+												<span class="badge badge-warning">On Leave</span>
+											</td>
+										</tr><tr role="row" class="odd">
+
+											<td>3</td>
+											<td>Laila Hamdy</td>
+											
+											<td>3423-132-987</td>
+											<td>6</td>
+											<td>
+												<span class="badge badge-danger">Not Available</span>
+											</td>
+
+
+
+										</tr><tr role="row" class="even">
+											<td>4</td>
+											<td>Mariam Ashraf</td>
+											
+											<td>333-444-7777</td>
+											<td>7</td>
+											<td>
+												<span class="badge badge-success">Available</span>
+											</td>
+										</tr><tr role="row" class="odd">
+
+											<td>5</td>
+											<td>Nada Ahmed </td>
+											
+											<td>3423-232-987</td>
+											<td>9</td>
+											<td>
+												<span class="badge badge-warning">On Leave</span>
+											</td>
+										</tr><tr role="row" class="even">
+
+											<td>6</td>
+											<td>Nada Abdelrahman</td>
+											
+											<td>3423-132-987</td>
+											<td>12</td>
+											<td>
+												<span class="badge badge-danger">Not Available</span>
+											</td>
+										</tr><tr role="row" class="odd">
+
+											<td>7</td>
+											<td>Hanaa Salah</td>
+											
+											<td>333-444-7777</td>
+											<td>14</td>
+											<td>
+												<span class="badge badge-success">Available</span>
+											</td>
+										</tr><tr role="row" class="even">
+
+											<td>8</td>
+											<td>Marwa Helmy</td>
+											
+											<td>3423-232-987</td>
+											<td>8</td>
+											<td>
+												<span class="badge badge-warning">On Leave</span>
+											</td>
+										</tr><tr role="row" class="odd">
+
+											<td>9</td>
+											<td>Hadeer Anwar</td>
+											
+											<td>3423-132-987</td>
+											<td>12</td>
+											<td>
+												<span class="badge badge-danger">Not Available</span>
+											</td>
+										</tr><tr role="row" class="even">
+
+											<td>10</td>
+											<td>Hadeer Khalid</td>
+											
+											<td>333-444-7777</td>
+											<td>1</td>
+											<td>
+												<span class="badge badge-success">Available</span>
+											</td>
+										</tr></tbody>
+								</table>
+								</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 col-md-5">
+									</div>
+									<div class="col-sm-12 col-md-7 m-auto">
+										<div class="dataTables_paginate paging_simple_numbers" id="tableId_paginate">
+											<ul class="pagination">
+												<li class="paginate_button page-item previous disabled" id="tableId_previous"><a href="#"
+														aria-controls="tableId" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+												<li class="paginate_button page-item active"><a href="#" aria-controls="tableId" data-dt-idx="1"
+														tabindex="0" class="page-link">1</a></li>
+												<li class="paginate_button page-item "><a href="#" aria-controls="tableId" data-dt-idx="2" tabindex="0"
+														class="page-link">2</a></li>
+												<li class="paginate_button page-item next" id="tableId_next"><a href="#" aria-controls="tableId"
+														data-dt-idx="3" tabindex="0" class="page-link">Next</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								</div>
+								
+								<div class="mb-5">
+									<button type="button" class="btn btn-black mt-3 mb-0 position-absolute cancel ml-3"><span class="ti-pencil-alt"></span> EDIT</button>
+								<button type="button" class="btn btn-black mt-3 mb-0 position-absolute ml-4 float-left"> Delete</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<a id="back-to-top" href="#" class="back-to-top">
+		<span class="ti-angle-up"></span>
+	</a>
+	<!-- /Back to Top -->
+	<!-- Jquery Library-->
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<!-- Popper Library-->
+	<script src="../js/popper.min.js"></script>
+	<!-- Bootstrap Library-->
+    <script src="../js/bootstrap.min.js"></script>
+    
+    <!-- Datatable  -->
+<!-- 	<script src="datatable/jquery.dataTables.min.js"></script>
+	<script src="datatable/dataTables.bootstrap4.min.js"></script> -->
+    
+	<!-- Custom Script-->
+	<script src="../js/custom.js"></script>
+
+</body>
+
+</html>

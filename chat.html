@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat</title>
+
+
+<!-- Fav  Icon Link -->
+<link rel="shortcut icon" type="image/png" href="images/d.png">
+<link rel="stylesheet" href="css/style.css">
+
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- themify icons CSS -->
+<!-- <link rel="stylesheet" href="css/themify-icons.css"> -->
+<!-- Animations CSS -->
+<link rel="stylesheet" href="css/animate.css">
+<!-- Main CSS -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/red.css" id="style_theme">
+<link rel="stylesheet" href="css/responsive.css">
+<!-- morris charts -->
+<link rel="stylesheet" href="charts/css/morris.css">
+<!-- jvectormap -->
+<link rel="stylesheet" href="css/jquery-jvectormap.css">
+
+<link rel="stylesheet" href="css/my_style.css">
+
+<script src="js/modernizr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Bruno+Ace&family=Chivo:wght@300;400;500;600;700;800;900&family=Lobster&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- DayPilot library -->
+  <script src="js/daypilot/daypilot-all.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div class="wrapper">
+
+	<nav id="sidebar" class="proclinic-bg">
+    <div class="sidebar-header">
+        <div class="ml-3">
+          <img src="images/d.png" class="logo w-20 mb-4 d-inline" alt="logo"><h2 class="d-inline pt-5 mt-6 font-w600 header_font ml-0">entque.</h2>
+        </div>			
+    </div>
+    <ul class="list-unstyled components">
+      <li class="">					
+          <a href="index.html" class="ml-3">Dashboard</a>					
+        <li class="ml-3">				 
+           <a href="calender.html" aria-expanded="false">
+             <span class="ml-3 mb-3">Schedule</span>
+           </a>					 
+         </li>
+      </li>
+
+              <li class="mt-4">
+        <a href="#nav-appoint" data-toggle="collapse" aria-expanded="false">
+          <span class="ml-3">Appointments</span>
+        </a>
+        <ul class="collapse list-unstyled new-round rounded" id="nav-appoint">
+          <li>
+            <a href="Appointments/add_appointment.html">Add Appointment</a>
+          </li>
+          <li>
+            <a href="Appointments/edit_appointment.html">Edit Appointment</a>
+          </li>
+          <li>
+            <a href="Appointments/all_appointment.html">All Appointments</a>
+          </li>
+          
+        </ul>
+      </li>
+
+      
+      <li class="mt-4">
+        <a href="#nav-patients" data-toggle="collapse" aria-expanded="false">
+          <span class="ml-3">Patients</span>
+        </a>
+        <ul class="collapse list-unstyled new-round rounded" id="nav-patients">
+          <li>
+            <a href="add_patient.html">Add Patient</a>
+          </li>
+          <li>
+            <a href="all_patients.html">All Patients</a>
+          </li>
+          <li>
+            <a href="edit_patient.html">Edit Patient</a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li>
+        <a href="#nav-doctors" data-toggle="collapse" aria-expanded="false">
+          <span class="ml-3 ">Doctors</span>
+        </a>
+        <ul class="collapse list-unstyled new-round" id="nav-doctors">
+          <li>
+            <a href="Doctors/add_doctor.html">Add Doctor</a>
+          </li>
+          <li>
+            <a href="Doctors/all_doctors.html">All Doctors</a>
+          </li>
+          <li>
+            <a href="Doctors/edit_doctor.html">Edit Doctor</a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li>
+        <a href="#nav-Staff" data-toggle="collapse" aria-expanded="false"> 
+          <span class="ml-3 ">Staff</span>
+        </a>
+        <ul class="collapse list-unstyled new-round" id="nav-Staff">
+          <li>
+            <a href="Staff/add_staff.html">Add Staff</a>
+          </li>
+          <li>
+            <a href="Staff/all_Staff.html">All Staff</a>
+          </li>
+          <li>
+            <a href="Staff/edit_staff.html">Edit Staff</a>
+          </li>
+        </ul>
+      </li>
+
+
+      
+      <li class="">
+        <a href="#nav-appointment" data-toggle="collapse" aria-expanded="false">
+          <span class="ml-3">Billing</span>
+        </a>
+        <ul class="collapse list-unstyled new-round" id="nav-appointment">
+          <li>
+            <a href="Billing/add_billing.html">Add Billing</a>
+          </li>
+          <li>
+            <a href="Billing/bill_list.html">Billing List</a>
+          </li>
+
+          <li>
+            <a href="Billing/Invoice.html">Invoice</a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li>
+        <a href="#nav-units" data-toggle="collapse" aria-expanded="false">
+          <span class="ml-3 ">Inventory</span>
+        </a>
+        <ul class="collapse list-unstyled new-round" id="nav-units">
+          <li>
+            <a href="Units/add_unit.html">Add Unit</a>
+          </li>
+          <li>
+            <a href="Units/edit_unit.html">Edit Unit</a>
+          </li>
+          <li>
+            <a href="Units/stock_units.html">Item Stock List</a>
+          </li>
+          <li>
+            <a href="Units/Issued_units.html">Issued Items</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#nav-services" data-toggle="collapse" aria-expanded="false">
+          <span class="ml-3 ">Services</span>
+        </a>
+        <ul class="collapse list-unstyled new-round" id="nav-services">
+          <li>
+            <a href="Services/add_service.html">Add Service</a>
+          </li>
+          <li>
+            <a href="Services/edit_service.html">Edit Service</a>
+          </li>
+          <li>
+            <a href="Services/cato.html">Services Categories</a>
+          </li>
+          <li>
+            <a href="Services/all_services.html">All Services</a>
+          </li>
+          
+        </ul>
+      </li>
+
+
+      <li class="active">
+        <a href="chat.html">
+          <span class="">Chat</span>
+        </a>
+      </li>
+
+    </ul>
+    <div class="nav-help animated fadeIn m-3 rounded-gray position-relative p-3">
+      <img src="images/help_trans.png"  class= 'w-100 position-absolute help-img' alt="">
+      <p class="copyright-text text-dark text-center">Have any question or need further assistance?</p>
+      <button class="button1">Ask Now!</button>
+    </div>
+  </nav>
+
+	<div id="content">
+
+<!-- 		<div class="row no-margin-padding">
+			<div class="col-md-6">
+				<h2 class="block-title my-3">Editing a patient</h2>
+			</div>
+			<div class="col-md-6">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active">Dashboard</li>
+				</ol>
+			</div>
+		</div> -->
+
+		<!-- Main Content -->
+		<div class="">
+			<div class="">
+				<div class="row w-100 p-0 m-0">
+
+
+
+            <section class="discussions">
+              <div class="discussion search">
+                <div class="searchbar">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  <input type="text" placeholder="Search..."></input>
+                </div>
+              </div>
+              <div class="discussion message-active">
+                <div class="photo" style="background-image: url(/images/woman.png);">
+                  <div class="online"></div>
+                </div>
+                <div class="desc-contact">
+                  <p class="name">Laila Hamdy</p>
+                  <p class="message">8:30 pm at the clinic if possible</p>
+                </div>
+                <div class="timer">12 sec</div>
+              </div>
+      
+              <div class="discussion">
+                <div class="photo" style="background-image: url(images/woman\ \(1\).png);">
+                  <div class="online"></div>
+                </div>
+                <div class="desc-contact">
+                  <p class="name">Nouran Muhammed</p>
+                  <p class="message">Send me the final report ! 🙂</p>
+                </div>
+                <div class="timer">3 min</div>
+              </div>
+      
+              <div class="discussion bg-bluee">
+                <div class="photo" style="background-image: url(images/woman\ \(2\).png);">
+                </div>
+                <div class="desc-contact">
+                  <p class="name">Hanaa Salah</p>
+                  <p class="message">Good morning Mariom </p>
+                </div>
+                <div class="timer">42 min</div>
+              </div>
+      
+              <div class="discussion">
+                <div class="photo" style="background-image: url(images/woman\ \(3\).png);">
+                  <div class="online"></div>
+                </div>
+                <div class="desc-contact">
+                  <p class="name">Mariam Ashraf</p>
+                  <p class="message">Let's meet for a coffee today? </p>
+                </div>
+                <div class="timer">2 hour</div>
+              </div>
+      
+              <div class="discussion">
+                <div class="photo" style="background-image: url(images/woman\ \(4\).png);">
+                </div>
+                <div class="desc-contact">
+                  <p class="name">Nada Ahmed</p>
+                  <p class="message">I need to discuss with you with </p>
+                </div>
+                <div class="timer">1 day</div>
+              </div>
+      
+              <div class="discussion">
+                <div class="photo" style="background-image: url(images/woman\ \(5\).png);">
+                </div>
+                <div class="desc-contact">
+                  <p class="name">Hadeer Anwar</p>
+                  <p class="message">Ahahah 😂</p>
+                </div>
+                <div class="timer">4 days</div>
+              </div>
+
+              <div class="discussion">
+                <div class="photo" style="background-image: url(images/man.png);">
+                </div>
+                <div class="desc-contact">
+                  <p class="name">Ahmed Mahmoud</p>
+                  <p class="message">I need your help</p>
+                </div>
+                <div class="timer">1 day</div>
+              </div>
+
+              <div class="discussion">
+                <div class="photo" style="background-image: url(images/man\ \(1\).png);">
+                </div>
+                <div class="desc-contact">
+                  <p class="name">Adel Mahmoud</p>
+                  <p class="message">I need your help</p>
+                </div>
+                <div class="timer">1 day</div>
+              </div>
+            </section>
+
+
+            <section class="chat">
+              <div class="header-chat">
+                <i class="icon fa fa-user-o" aria-hidden="true"></i>
+                <p class="name">Hanaa Salah</p>
+                <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>
+              </div>
+              <div class="messages-chat">
+                <div class="message">
+                  <div class="photo" style="background-image: url(images/woman\ \(2\).png);">
+                    <div class="online"></div>
+                  </div>
+                  <p class="text"> Good morning Mariom </p>
+                </div>
+                <div class="message text-only">
+                  <p class="text"> I found a special case and need your opinion</p>
+                </div>
+                <p class="time"> 14h58</p>
+                <div class="message text-only">
+                  <div class="response">
+                    <p class="text"> Hey Hanaa ! for sure 😃</p>
+                  </div>
+                </div>
+             
+
+
+                <div class="message">
+                  <div class="photo" style="background-image: url(images/woman\ \(2\).png);">
+                    <div class="online"></div>
+                  </div>
+                  <p class="text">When can we talk ? </p>
+                </div>
+                <p class="time"> 15h09</p>
+
+                <div class="message text-only">
+                  <div class="response">
+                    <p class="text"> after 0.5h if possible 😳</p>
+                  </div>
+                </div>
+                <p class="response-time time"> 15h04</p>
+
+
+                <div class="message">
+                  <div class="photo" style="background-image: url(images/woman\ \(2\).png);">
+                    <div class="online"></div>
+                  </div>
+                  <p class="text">Very good. See you 😃 </p>
+                </div>
+
+                <div class="message">
+                  <div class="photo" style="background-image: url(images/woman\ \(2\).png);">
+                    <div class="online"></div>
+                  </div>
+                  <p class="text">And I really appreciate this! </p>
+                </div>
+                <p class="time"> 15h09</p>
+
+              </div>
+              <div class="footer-chat position-fixed">
+                <i class="icon fa fa-smile-o clickable" style="font-size:25pt;" aria-hidden="true"></i>
+                <input type="text" class="write-message" placeholder="Type your message here"></input>
+                <i class="icon send fa fa-paper-plane-o clickable" aria-hidden="true"></i>
+              </div>
+            </section>
+          </div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+	<!-- Jquery Library-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- Popper Library-->
+	<script src="js/popper.min.js"></script>
+	<!-- Bootstrap Library-->
+	<script src="js/bootstrap.min.js"></script>
+	
+	
+	<!-- Datatable  -->
+	<script src="datatable/jquery.dataTables.min.js"></script>
+	<script src="datatable/dataTables.bootstrap4.min.js"></script>
+	
+	<!-- Custom Script-->
+	<script src="js/custom.js"></script>
+	<script src="js/edit_patient.js"></script>
+
+</body>
+</html>
